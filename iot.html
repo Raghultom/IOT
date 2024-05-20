@@ -1,0 +1,2708 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IOT</title>
+    <link rel="stylesheet" href="./iot.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+</head>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+<!-- Add Hammer.js library for swipe functionality -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+<link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+<link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<style>
+    /* Navbar button styles */
+
+    .dropdown-toggle::after {
+        border-top-color: green;
+    }
+
+    /* Custom CSS to change carousel control button color to green */
+    .carousel-control-prev,
+    .carousel-control-next {
+        background-color: green;
+    }
+
+    /* Custom CSS to change carousel control button icon color to white */
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        background-color: white;
+    }
+
+
+    .bold-text {
+        font-weight: bold;
+    }
+
+
+
+    .iot-mobile-icon {
+  font-weight: bold;
+  float: right;
+}
+
+.iot-mobile-card-header button {
+  width: 100%;
+  text-align: left;
+}
+
+.iot-mobile-card-header button:focus {
+  outline: none;
+}
+
+
+</style>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top"
+        style="background-color: white; height: auto; box-shadow: 4px 4px 8px 0px rgba(0, 0, 0, 0.05); margin-bottom: 1px !important;">
+        <div class="container">
+            <a class="navbar-brand" href="#" style="padding: 0;">
+                <img src="./iotimages/Logo.png" alt="Logo" class="nav-logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon" style="border: none;"></span>
+            </button>
+
+            <div class="sidebar">
+                <div class="sidebar-header">
+                    <a class="navbar-brand" href="#" style="padding: 0;">
+                        <img src="./iotimages/Logo.png" alt="Logo" class="nav-logo-sidebar">
+                    </a>
+                    <span class="cancel-icon" onclick="closeSidebar()">&times;</span>
+                </div>
+                <ul class="navbar-nav" id="nav-sidebar-ul">
+                    <li class="nav-item">
+                        <a class="nav-link d-flex justify-content-between align-items-center" id="nav-a" href="#"
+                            onclick="toggleDropdown('about')">About <i id="about-icon"
+                                class="fas bi-chevron-down about-icon"></i></a>
+                        <div id="about-dropdown" class="dropdown-menu" aria-labelledby="navbarDropdownAbout"
+                            style="display: none;">
+                            <a class="dropdown-item" href="#">JustLogix</a>
+                            <a class="dropdown-item" href="#">Skein Technologies</a>
+                            <a class="dropdown-item" href="#">Management</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Product</a>
+                        </div>
+                    </li>
+                    <hr class="footer-line" style="margin-top: 0px !important;">
+                    <li class="nav-item" style="margin-top: -20px !important;">
+                        <a class="nav-link d-flex justify-content-between align-items-center" id="nav-a" href="#"
+                            onclick="toggleDropdown('services')">Services <i id="services-icon"
+                                class="fas bi-chevron-down"></i></a>
+                        <div id="services-dropdown" class="dropdown-menu" aria-labelledby="navbarDropdownServices"
+                            style="display: none;">
+                            <a class="dropdown-item" href="../Webapp/webapp.html">WebApp</a>
+                            <a class="dropdown-item" href="#">Home</a>
+                            <a class="dropdown-item" href="#">Management</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Product</a>
+                        </div>
+                    </li>
+                    <hr class="footer-line" style="margin-top: 0px !important;">
+                    <li class="nav-item" style="margin-top: -20px !important;">
+                        <a class="nav-link d-flex justify-content-between align-items-center" id="nav-a" href="#"
+                            onclick="toggleDropdown('Technologies')">Technologies <i id="Technologies-icon"
+                                class="fas bi-chevron-down"></i></a>
+
+                        <div id="Technologies-dropdown" class="dropdown-menu"
+                            aria-labelledby="navbarDropdownTechnologies" style="display: none;">
+                            <a class="dropdown-item" href="../Webapp/webapp.html">WebApp</a>
+                            <a class="dropdown-item" href="#">Home</a>
+                            <a class="dropdown-item" href="#">Management</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Product</a>
+                        </div>
+                    </li>
+                    <hr class="footer-line" style="margin-top: 0px !important;">
+
+                    <li class="nav-item" style="margin-top: -20px !important;">
+                        <a class="nav-link d-flex justify-content-between align-items-center" id="nav-a" href="#"
+                            onclick="toggleDropdown('Industries')">Industries <i id="Industries-icon"
+                                class="fas bi-chevron-down"></i></a>
+                        <div id="Industries-dropdown" class="dropdown-menu" aria-labelledby="navbarDropdownIndustries"
+                            style="display: none;">
+                            <a class="dropdown-item" href="../Webapp/webapp.html">WebApp</a>
+                            <a class="dropdown-item" href="#">Home</a>
+                            <a class="dropdown-item" href="#">Management</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Product</a>
+                        </div>
+                    </li>
+                    <hr class="footer-line" style="margin-top: 0px !important;">
+
+                    <li class="nav-item" style="margin-top: -20px !important;">
+                        <a class="nav-link d-flex justify-content-between align-items-center" id="nav-a" href="#"
+                            onclick="toggleDropdown('Portfolios')">Portfolios
+                            <!-- <i id="services-icon"
+                                class="fas bi-chevron-down"></i> -->
+                        </a>
+                        <!-- <div id="Portfolios-dropdown" class="dropdown-menu" aria-labelledby="navbarDropdownPortfolios"
+                            style="display: none;">
+                            <a class="dropdown-item" href="../Webapp/webapp.html">WebApp</a>
+                            <a class="dropdown-item" href="#">Home</a>
+                            <a class="dropdown-item" href="#">Management</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Product</a>
+                        </div> -->
+                    </li>
+                    <hr class="footer-line" style="margin-top: 0px !important;">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><button type="button" class="navbar-button">Get in
+                                Touch</button></a>
+                    </li>
+
+                </ul>
+            </div>
+
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav ml-auto"
+                    style="font-weight: 400; font-family: 'Source Sans Pro', sans-serif; gap: 10px !important;">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownSolutions" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">About</a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownSolutions">
+                            <a class="dropdown-item" href="../Webapp/webapp.html">WebApp</a>
+                            <a class="dropdown-item" href="#">Home</a>
+                            <a class="dropdown-item" href="#">Management</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Product</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownSolutions" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Services</a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownSolutions">
+                            <a class="dropdown-item" href="../Webapp/webapp.html">WebApp</a>
+                            <a class="dropdown-item" href="#">Home</a>
+                            <a class="dropdown-item" href="#">Management</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Product</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownIndustries" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Solutions</a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownIndustries">
+                            <a class="dropdown-item" href="../Webapp/webapp.html">WebApp</a>
+                            <a class="dropdown-item" href="#">Home</a>
+                            <a class="dropdown-item" href="#">Management</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Product</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownTechnologies" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Industries</a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownTechnologies">
+                            <a class="dropdown-item" href="../Webapp/webapp.html">WebApp</a>
+                            <a class="dropdown-item" href="#">Home</a>
+                            <a class="dropdown-item" href="#">Management</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Product</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownPortfolio" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Technologies</a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownPortfolio">
+                            <a class="dropdown-item" href="../Webapp/webapp.html">WebApp</a>
+                            <a class="dropdown-item" href="#">Home</a>
+                            <a class="dropdown-item" href="#">Management</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Product</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown" style="margin-top: 1px !important; color: #676968 !important;">
+                        <a class="nav-link dropdown-togglee" href="#" id="navbarDropdownPortfolio" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Portfolio</a>
+                        <!-- <div class="dropdown-menu" aria-labelledby="navbarDropdownPortfolio">
+                            <a class="dropdown-item" href="../Webapp/webapp.html">WebApp</a>
+                            <a class="dropdown-item" href="#">Home</a>
+                            <a class="dropdown-item" href="#">Management</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Product</a>
+                        </div> -->
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><button type="button" class="navbar_button">Get in
+                                Touch</button></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <script>
+        // Function to open sidebar 
+        function openSidebar() {
+            document.querySelector('.sidebar').classList.add('active');
+            document.querySelector('body').classList.add('sidebar-open');
+        }
+
+        // Function to close sidebar
+        function closeSidebar() {
+            document.querySelector('.sidebar').classList.remove('active');
+            document.querySelector('body').classList.remove('sidebar-open');
+        }
+
+        function toggleDropdown(dropdownId) {
+            var dropdown = document.getElementById(dropdownId + '-dropdown');
+            var icon = document.getElementById(dropdownId + '-icon');
+
+            // Close all dropdowns except the one being opened
+            var dropdowns = document.querySelectorAll('.dropdown-menu');
+            dropdowns.forEach(function (d) {
+                if (d.id !== dropdownId + '-dropdown' && d.style.display === 'block') {
+                    d.style.display = 'none';
+                    var associatedIcon = document.getElementById(d.id.replace('-dropdown', '-icon'));
+                    associatedIcon.classList.remove('bi-chevron-up');
+                    associatedIcon.classList.add('bi-chevron-down');
+                }
+            });
+
+            // Toggle the display and icon class of the current dropdown
+            if (dropdown.style.display === 'block') {
+                dropdown.style.display = 'none';
+                icon.classList.remove('bi-chevron-up');
+                icon.classList.add('bi-chevron-down');
+            } else {
+                dropdown.style.display = 'block';
+                icon.classList.remove('bi-chevron-down');
+                icon.classList.add('bi-chevron-up');
+            }
+        }
+
+
+        // Toggle sidebar on navbar toggler click
+        document.querySelector('.navbar-toggler').addEventListener('click', function () {
+            if (document.querySelector('.sidebar').classList.contains('active')) {
+                closeSidebar(); // Close sidebar if already open
+            } else {
+                openSidebar(); // Open sidebar if closed
+            }
+        });
+    </script>
+    <!-- nav bar end-->
+    <!-- hero section -->
+   
+    <div class="container">
+        <div class="retail-main-div">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-12 col-12 ">
+                    <h1 class="retail-header"> IoT <br>Development Services
+                    </h1>
+                    <p class="retail-header-description"> "Leverage cutting-edge technology and expert consultancy
+                        to drive your business forward in the digital age."
+                    </p>
+                    <p class="retail-header-content">
+                        Develop a scalable, dynamic, and feature-rich application with our Angular js development
+                        company. Our skilled experts are proficient in providing engaging and effective Angular
+                        development services with a proven record of success.
+
+                    </p>
+                    <div class="retail-button-div">
+                        <button type="button" class="retail-button">Discover Our Service</button>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                    <img src="./iotimages/IoT Development Services .png" alt="retail_hero"
+                        class=" img-fluid retail-img" />
+                </div>
+            </div>
+
+        </div>
+    </div> 
+    <!-- hero section end-->
+
+    <!-- iot development start -->
+        
+    <div class="container iot-development-container">
+        <h1 class="text-left">IoT Development <span class="text-span">Services</span></h1>
+        <div class="row iot-development-row">
+            <div class="col-md-4 iot-development-column">
+                <img src="./iotimages/dot.png" class="iot-development-column-dot">
+                <div class="list-group" id="list-tab" role="tablist">
+                    <a class="list-group-item list-group-item-action active" id="list-iot-wearable-list"
+                        data-toggle="list" href="#list-iot-wearable" role="tab" aria-controls="iot-wearable">IoT
+                        Wearable App Development</a>
+                    <a class="list-group-item list-group-item-action" id="list-dashboard-list" data-toggle="list"
+                        href="#list-dashboard" role="tab" aria-controls="dashboard">IoT Dashboard Development</a>
+                    <a class="list-group-item list-group-item-action" id="list-analytics-list" data-toggle="list"
+                        href="#list-analytics" role="tab" aria-controls="analytics">IoT Data Analytics</a>
+                    <a class="list-group-item list-group-item-action" id="list-data-center-list" data-toggle="list"
+                        href="#list-data-center" role="tab" aria-controls="data-center">Data Center Implementation</a>
+                    <a class="list-group-item list-group-item-action" id="list-embedded-software-list"
+                        data-toggle="list" href="#list-embedded-software" role="tab"
+                        aria-controls="embedded-software">Embedded Software Development</a>
+                    <a class="list-group-item list-group-item-action" id="list-app-dev-list" data-toggle="list"
+                        href="#list-app-dev" role="tab" aria-controls="app-dev">IoT App Development</a>
+                    <a class="list-group-item list-group-item-action" id="list-integration-list" data-toggle="list"
+                        href="#list-integration" role="tab" aria-controls="integration">IoT Integration</a>
+                    <a class="list-group-item list-group-item-action" id="list-testing-list" data-toggle="list"
+                        href="#list-testing" role="tab" aria-controls="testing">IoT Testing and Maintenance</a>
+                    <a class="list-group-item list-group-item-action" id="list-consulting-list" data-toggle="list"
+                        href="#list-consulting" role="tab" aria-controls="consulting">IoT Consulting</a>
+                </div>
+            </div>
+            <div class="col-md-7">
+
+                <div class="tab-content" id="nav-tabContent">
+                    <div class="tab-pane fade show active" id="list-iot-wearable" role="tabpanel"
+                        aria-labelledby="list-iot-wearable-list">
+                        <h3>IoT Wearable App Development</h3>
+                        <p>Custom web development is a unique service that ClickBox Agency provides. We make digital
+                            solutions that fit the specific wants and goals of each client. Custom web creation, on the
+                            other hand, means making websites and apps from scratch, making sure they fit the client's
+                            needs exactly. We are great at making custom web solutions that fit the brand identity,
+                            business methods, and goals for the user experience of the client.</p>
+                        <p>We include clients in all stages of growth, from coming up with ideas to putting them into
+                            action, through a collaborative process. Custom features, functions, and a user interface
+                            were built into the service to make it work best and be scalable. The custom web development
+                            skills of ClickBox Agency cover a wide range of businesses, giving clients an edge in the
+                            digital world. With a focus on quality and new ideas, ClickBox Agency creates custom web
+                            solutions that match the goals and vision of each client, promoting success in the online
+                            world.</p>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <ul class="list-unstyled">
+                                    <li><i><img src="./iotimages/tick.png"></i> Advanced Development Approach</li>
+                                    <li><i><img src="./iotimages/tick.png"></i> User Oriented Ideology</li>
+                                    <li><i><img src="./iotimages/tick.png"></i> Post launch Support & Maintenance</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <ul class="list-unstyled">
+                                    <li><i><img src="./iotimages/tick.png"></i> Flexible Engagement Model</li>
+                                    <li><i><img src="./iotimages/tick.png"></i> All in One- from Development </li>
+                                    <li><i><img src="./iotimages/tick.png"></i> Ready to launch Solution</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <a href="#" class="btn text-pane-btn">Discover Our Service</a>
+                    </div>
+                    <div class="tab-pane fade" id="list-dashboard" role="tabpanel"
+                        aria-labelledby="list-dashboard-list">
+                        <h3>IoT Dashboard Development</h3>
+                        <p>Custom web development is a unique service that ClickBox Agency provides. We make digital
+                            solutions that fit the specific wants and goals of each client. Custom web creation, on the
+                            other hand, means making websites and apps from scratch, making sure they fit the client's
+                            needs exactly. We are great at making custom web solutions that fit the brand identity,
+                            business methods, and goals for the user experience of the client.
+                            We include clients in all stages of growth, from coming up with ideas to putting them into
+                            action, through a collaborative process. Custom features, functions, and a user interface
+                            were built into the service to make it work best and be scalable. The custom web development
+                            skills of ClickBox Agency cover a wide range of businesses, giving clients an edge in the
+                            digital world. With a focus on quality and new ideas, ClickBox Agency creates custom web
+                            solutions that match the goals and vision of each client, promoting success in the online
+                            world.</p>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <ul class="list-unstyled">
+                                    <li><i><img src="./iotimages/tick.png"></i> Advanced Development Approach</li>
+                                    <li><i><img src="./iotimages/tick.png"></i> User Oriented Ideology</li>
+                                    <li><i><img src="./iotimages/tick.png"></i> Post launch Support & Maintenance</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <ul class="list-unstyled">
+                                    <li><i><img src="./iotimages/tick.png"></i> Flexible Engagement Model</li>
+                                    <li><i><img src="./iotimages/tick.png"></i> All in One- from Development </li>
+                                    <li><i><img src="./iotimages/tick.png"></i> Ready to launch Solution</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <a href="#" class="btn text-pane-btn">Discover Our Service</a>
+                    </div>
+                    <div class="tab-pane fade" id="list-analytics" role="tabpanel"
+                        aria-labelledby="list-analytics-list">
+                        <h3>IoT Data Analytics</h3>
+                        <p>Custom web development is a unique service that ClickBox Agency provides. We make digital
+                            solutions that fit the specific wants and goals of each client. Custom web creation, on the
+                            other hand, means making websites and apps from scratch, making sure they fit the client's
+                            needs exactly. We are great at making custom web solutions that fit the brand identity,
+                            business methods, and goals for the user experience of the client.</p>
+                        <p>We include clients in all stages of growth, from coming up with ideas to putting them into
+                            action, through a collaborative process. Custom features, functions, and a user interface
+                            were built into the service to make it work best and be scalable. The custom web development
+                            skills of ClickBox Agency cover a wide range of businesses, giving clients an edge in the
+                            digital world. With a focus on quality and new ideas, ClickBox Agency creates custom web
+                            solutions that match the goals and vision of each client, promoting success in the online
+                            world.</p>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <ul class="list-unstyled">
+                                    <li><i><img src="./iotimages/tick.png"></i> Advanced Development Approach</li>
+                                    <li><i><img src="./iotimages/tick.png"></i> User Oriented Ideology</li>
+                                    <li><i><img src="./iotimages/tick.png"></i> Post launch Support & Maintenance</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <ul class="list-unstyled">
+                                    <li><i><img src="./iotimages/tick.png"></i> Flexible Engagement Model</li>
+                                    <li><i><img src="./iotimages/tick.png"></i> All in One- from Development </li>
+                                    <li><i><img src="./iotimages/tick.png"></i> Ready to launch Solution</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <a href="#" class="btn text-pane-btn">Discover Our Service</a>
+                    </div>
+                    <div class="tab-pane fade" id="list-data-center" role="tabpanel"
+                        aria-labelledby="list-data-center-list">
+                        <h3>Data Center Implementation</h3>
+                        <p>Custom web development is a unique service that ClickBox Agency provides. We make digital
+                            solutions that fit the specific wants and goals of each client. Custom web creation, on the
+                            other hand, means making websites and apps from scratch, making sure they fit the client's
+                            needs exactly. We are great at making custom web solutions that fit the brand identity,
+                            business methods, and goals for the user experience of the client.</p>
+                        <p>We include clients in all stages of growth, from coming up with ideas to putting them into
+                            action, through a collaborative process. Custom features, functions, and a user interface
+                            were built into the service to make it work best and be scalable. The custom web development
+                            skills of ClickBox Agency cover a wide range of businesses, giving clients an edge in the
+                            digital world. With a focus on quality and new ideas, ClickBox Agency creates custom web
+                            solutions that match the goals and vision of each client, promoting success in the online
+                            world.</p>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <ul class="list-unstyled">
+                                    <li><i><img src="./iotimages/tick.png"></i> Advanced Development Approach</li>
+                                    <li><i><img src="./iotimages/tick.png"></i> User Oriented Ideology</li>
+                                    <li><i><img src="./iotimages/tick.png"></i> Post launch Support & Maintenance</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <ul class="list-unstyled">
+                                    <li><i><img src="./iotimages/tick.png"></i> Flexible Engagement Model</li>
+                                    <li><i><img src="./iotimages/tick.png"></i> All in One- from Development </li>
+                                    <li><i><img src="./iotimages/tick.png"></i> Ready to launch Solution</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <a href="#" class="btn text-pane-btn">Discover Our Service</a>
+                    </div>
+                    <div class="tab-pane fade" id="list-embedded-software" role="tabpanel"
+                        aria-labelledby="list-embedded-software-list">
+                        <h3>Embedded Software Development</h3>
+                        <p>Custom web development is a unique service that ClickBox Agency provides. We make digital
+                            solutions that fit the specific wants and goals of each client. Custom web creation, on the
+                            other hand, means making websites and apps from scratch, making sure they fit the client's
+                            needs exactly. We are great at making custom web solutions that fit the brand identity,
+                            business methods, and goals for the user experience of the client.</p>
+                        <p>We include clients in all stages of growth, from coming up with ideas to putting them into
+                            action, through a collaborative process. Custom features, functions, and a user interface
+                            were built into the service to make it work best and be scalable. The custom web development
+                            skills of ClickBox Agency cover a wide range of businesses, giving clients an edge in the
+                            digital world. With a focus on quality and new ideas, ClickBox Agency creates custom web
+                            solutions that match the goals and vision of each client, promoting success in the online
+                            world.</p>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <ul class="list-unstyled">
+                                    <li><i><img src="./iotimages/tick.png"></i> Advanced Development Approach</li>
+                                    <li><i><img src="./iotimages/tick.png"></i> User Oriented Ideology</li>
+                                    <li><i><img src="./iotimages/tick.png"></i> Post launch Support & Maintenance</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <ul class="list-unstyled">
+                                    <li><i><img src="./iotimages/tick.png"></i> Flexible Engagement Model</li>
+                                    <li><i><img src="./iotimages/tick.png"></i> All in One- from Development </li>
+                                    <li><i><img src="./iotimages/tick.png"></i> Ready to launch Solution</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <a href="#" class="btn text-pane-btn">Discover Our Service</a>
+                    </div>
+                    <div class="tab-pane fade" id="list-app-dev" role="tabpanel" aria-labelledby="list-app-dev-list">
+                        <h3>IoT App Development</h3>
+                        <p>Custom web development is a unique service that ClickBox Agency provides. We make digital
+                            solutions that fit the specific wants and goals of each client. Custom web creation, on the
+                            other hand, means making websites and apps from scratch, making sure they fit the client's
+                            needs exactly. We are great at making custom web solutions that fit the brand identity,
+                            business methods, and goals for the user experience of the client.</p>
+                        <p>We include clients in all stages of growth, from coming up with ideas to putting them into
+                            action, through a collaborative process. Custom features, functions, and a user interface
+                            were built into the service to make it work best and be scalable. The custom web development
+                            skills of ClickBox Agency cover a wide range of businesses, giving clients an edge in the
+                            digital world. With a focus on quality and new ideas, ClickBox Agency creates custom web
+                            solutions that match the goals and vision of each client, promoting success in the online
+                            world.</p>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <ul class="list-unstyled">
+                                    <li><i><img src="./iotimages/tick.png"></i> Advanced Development Approach</li>
+                                    <li><i><img src="./iotimages/tick.png"></i> User Oriented Ideology</li>
+                                    <li><i><img src="./iotimages/tick.png"></i> Post launch Support & Maintenance</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <ul class="list-unstyled">
+                                    <li><i><img src="./iotimages/tick.png"></i> Flexible Engagement Model</li>
+                                    <li><i><img src="./iotimages/tick.png"></i> All in One- from Development </li>
+                                    <li><i><img src="./iotimages/tick.png"></i> Ready to launch Solution</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <a href="#" class="btn text-pane-btn">Discover Our Service</a>
+                    </div>
+                    <div class="tab-pane fade" id="list-integration" role="tabpanel"
+                        aria-labelledby="list-integration-list">
+                        <h3>IoT Integration</h3>
+                        <p>Custom web development is a unique service that ClickBox Agency provides. We make digital
+                            solutions that fit the specific wants and goals of each client. Custom web creation, on the
+                            other hand, means making websites and apps from scratch, making sure they fit the client's
+                            needs exactly. We are great at making custom web solutions that fit the brand identity,
+                            business methods, and goals for the user experience of the client.</p>
+                        <p>We include clients in all stages of growth, from coming up with ideas to putting them into
+                            action, through a collaborative process. Custom features, functions, and a user interface
+                            were built into the service to make it work best and be scalable. The custom web development
+                            skills of ClickBox Agency cover a wide range of businesses, giving clients an edge in the
+                            digital world. With a focus on quality and new ideas, ClickBox Agency creates custom web
+                            solutions that match the goals and vision of each client, promoting success in the online
+                            world.</p>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <ul class="list-unstyled">
+                                    <li><i><img src="./iotimages/tick.png"></i> Advanced Development Approach</li>
+                                    <li><i><img src="./iotimages/tick.png"></i> User Oriented Ideology</li>
+                                    <li><i><img src="./iotimages/tick.png"></i> Post launch Support & Maintenance</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <ul class="list-unstyled">
+                                    <li><i><img src="./iotimages/tick.png"></i> Flexible Engagement Model</li>
+                                    <li><i><img src="./iotimages/tick.png"></i> All in One- from Development </li>
+                                    <li><i><img src="./iotimages/tick.png"></i> Ready to launch Solution</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <a href="#" class="btn text-pane-btn">Discover Our Service</a>
+                    </div>
+                    <div class="tab-pane fade" id="list-testing" role="tabpanel" aria-labelledby="list-testing-list">
+                        <h3>IoT Testing and Maintenance</h3>
+                        <p>Custom web development is a unique service that ClickBox Agency provides. We make digital
+                            solutions that fit the specific wants and goals of each client. Custom web creation, on the
+                            other hand, means making websites and apps from scratch, making sure they fit the client's
+                            needs exactly. We are great at making custom web solutions that fit the brand identity,
+                            business methods, and goals for the user experience of the client.</p>
+                        <p>We include clients in all stages of growth, from coming up with ideas to putting them into
+                            action, through a collaborative process. Custom features, functions, and a user interface
+                            were built into the service to make it work best and be scalable. The custom web development
+                            skills of ClickBox Agency cover a wide range of businesses, giving clients an edge in the
+                            digital world. With a focus on quality and new ideas, ClickBox Agency creates custom web
+                            solutions that match the goals and vision of each client, promoting success in the online
+                            world.</p>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <ul class="list-unstyled">
+                                    <li><i><img src="./iotimages/tick.png"></i> Advanced Development Approach</li>
+                                    <li><i><img src="./iotimages/tick.png"></i> User Oriented Ideology</li>
+                                    <li><i><img src="./iotimages/tick.png"></i> Post launch Support & Maintenance</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <ul class="list-unstyled">
+                                    <li><i><img src="./iotimages/tick.png"></i> Flexible Engagement Model</li>
+                                    <li><i><img src="./iotimages/tick.png"></i> All in One- from Development </li>
+                                    <li><i><img src="./iotimages/tick.png"></i> Ready to launch Solution</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <a href="#" class="btn text-pane-btn">Discover Our Service</a>
+                    </div>
+                    <div class="tab-pane fade" id="list-consulting" role="tabpanel"
+                        aria-labelledby="list-consulting-list">
+                        <h3>IoT Consulting</h3>
+                        <p>Custom web development is a unique service that ClickBox Agency provides. We make digital
+                            solutions that fit the specific wants and goals of each client. Custom web creation, on the
+                            other hand, means making websites and apps from scratch, making sure they fit the client's
+                            needs exactly. We are great at making custom web solutions that fit the brand identity,
+                            business methods, and goals for the user experience of the client.</p>
+                        <p>We include clients in all stages of growth, from coming up with ideas to putting them into
+                            action, through a collaborative process. Custom features, functions, and a user interface
+                            were built into the service to make it work best and be scalable. The custom web development
+                            skills of ClickBox Agency cover a wide range of businesses, giving clients an edge in the
+                            digital world. With a focus on quality and new ideas, ClickBox Agency creates custom web
+                            solutions that match the goals and vision of each client, promoting success in the online
+                            world.</p>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <ul class="list-unstyled">
+                                    <li><i><img src="./iotimages/tick.png"></i> Advanced Development Approach</li>
+                                    <li><i><img src="./iotimages/tick.png"></i> User Oriented Ideology</li>
+                                    <li><i><img src="./iotimages/tick.png"></i> Post launch Support & Maintenance</li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <ul class="list-unstyled">
+                                    <li><i><img src="./iotimages/tick.png"></i> Flexible Engagement Model</li>
+                                    <li><i><img src="./iotimages/tick.png"></i> All in One- from Development </li>
+                                    <li><i><img src="./iotimages/tick.png"></i> Ready to launch Solution</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <a href="#" class="btn text-pane-btn">Discover Our Service</a>
+                    </div>
+                </div>
+
+
+
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container iot-mobile-maincontainer">
+        <h2>IoT Development <span class="iot-mobile-span">Services</span></h2>
+        <div class="iot-mobile-background">
+        <div id="accordionExample">
+            <div class="iot-mobile-card">
+                <div class="iot-mobile-card-header" id="headingOne">
+                    <h3 class="mb-0">
+                        <button class="btn btn-link iot-mobile-btn active" type="button" data-toggle="collapse"
+                            data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            IoT Wearable App Development <span class="iot-mobile-icon">-</span>
+                        </button>
+                    </h3>
+                </div>
+                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                    data-parent="#accordionExample">
+                    <div class="iot-mobile-card-body">
+                        <p>Custom web development is a vital service that ClickDex Agency provides. We design and
+                            advance software for specific areas, and goods made available over the internet. These
+                            applications run on remote web servers, not on native OS devices. Additionally, they
+                            facilitate real-time interactions and updating, making them highly efficient and interactive
+                            for the end-user.</p>
+                        <ul class="custom-list">
+                            <li><span>Advanced Development Approach</span></li>
+                            <li><span>User-Driven Ideology</span></li>
+                            <li><span>Better Performance Guarantee</span></li>
+                            <li><span>Post Launch Support </span></li>
+                            <li><span>Flexible Engagement Model</span></li>
+                            <li><span>All-in-One: From Development</span></li>
+                        </ul>
+                        <a href="#" class="btn iot-mobile-button">Discover Our Service</a>
+
+                    </div>
+                </div>
+            </div>
+        
+
+
+            <div class="iot-mobile-card">
+                <div class="iot-mobile-card-header" id="headingtwo">
+                    <h3 class="mb-0">
+                        <button class="btn btn-link collapsed iot-mobile-btn" type="button" data-toggle="collapse"
+                            data-target="#collapsetwo" aria-expanded="false" aria-controls="collapsetwo">
+                            IoT Dashboard Development <span class="iot-mobile-icon">-</span>
+                        </button>
+                    </h3>
+                </div>
+                <div id="collapsetwo" class="collapse" aria-labelledby="headingtwo"
+                    data-parent="#accordionExample">
+                    <div class="iot-mobile-card-body">
+                        <p>Custom web development is a vital service that ClickDex Agency provides. We design and
+                            advance software for specific areas, and goods made available over the internet. These
+                            applications run on remote web servers, not on native OS devices. Additionally, they
+                            facilitate real-time interactions and updating, making them highly efficient and interactive
+                            for the end-user.</p>
+                        <ul class="custom-list">
+                            <li><span>Advanced Development Approach</span></li>
+                            <li><span>User-Driven Ideology</span></li>
+                            <li><span>Better Performance Guarantee</span></li>
+                            <li><span>Post Launch Support </span></li>
+                            <li><span>Flexible Engagement Model</span></li>
+                            <li><span>All-in-One: From Development</span></li>
+                        </ul>
+                        <a href="#" class="btn iot-mobile-button">Discover Our Service</a>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="iot-mobile-card">
+                <div class="iot-mobile-card-header" id="headingThree">
+                    <h3 class="mb-0">
+                        <button class="btn btn-link collapsed iot-mobile-btn" type="button" data-toggle="collapse"
+                            data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            IoT Data Analytics <span class="iot-mobile-icon">-</span>
+                        </button>
+                    </h3>
+                </div>
+                <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
+                    data-parent="#accordionExample">
+                    <div class="iot-mobile-card-body">
+                        <p>Custom web development is a vital service that ClickDex Agency provides. We design and
+                            advance software for specific areas, and goods made available over the internet. These
+                            applications run on remote web servers, not on native OS devices. Additionally, they
+                            facilitate real-time interactions and updating, making them highly efficient and interactive
+                            for the end-user.</p>
+                        <ul class="custom-list">
+                            <li><span>Advanced Development Approach</span></li>
+                            <li><span>User-Driven Ideology</span></li>
+                            <li><span>Better Performance Guarantee</span></li>
+                            <li><span>Post Launch Support </span></li>
+                            <li><span>Flexible Engagement Model</span></li>
+                            <li><span>All-in-One: From Development</span></li>
+                        </ul>
+                        <a href="#" class="btn iot-mobile-button">Discover Our Service</a>
+
+                    </div>
+                </div>
+            </div>
+            <div class="iot-mobile-card">
+                <div class="iot-mobile-card-header" id="headingFour">
+                    <h3 class="mb-0">
+                        <button class="btn btn-link collapsed iot-mobile-btn" type="button" data-toggle="collapse"
+                            data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                            Data Center Implementation <span class="iot-mobile-icon">-</span>
+                        </button>
+                    </h3>
+                </div>
+                <div id="collapseFour" class="collapse" aria-labelledby="headingFour"
+                    data-parent="#accordionExample">
+                    <div class="iot-mobile-card-body">
+                        <p>Custom web development is a vital service that ClickDex Agency provides. We design and
+                            advance software for specific areas, and goods made available over the internet. These
+                            applications run on remote web servers, not on native OS devices. Additionally, they
+                            facilitate real-time interactions and updating, making them highly efficient and interactive
+                            for the end-user.</p>
+                        <ul class="custom-list">
+                            <li><span>Advanced Development Approach</span></li>
+                            <li><span>User-Driven Ideology</span></li>
+                            <li><span>Better Performance Guarantee</span></li>
+                            <li><span>Post Launch Support </span></li>
+                            <li><span>Flexible Engagement Model</span></li>
+                            <li><span>All-in-One: From Development</span></li>
+                        </ul>
+                        <a href="#" class="btn iot-mobile-button">Discover Our Service</a>
+
+                    </div>
+                </div>
+            </div>
+            <div class="iot-mobile-card">
+                <div class="iot-mobile-card-header" id="headingFive">
+                    <h3 class="mb-0">
+                        <button class="btn btn-link collapsed iot-mobile-btn" type="button" data-toggle="collapse"
+                            data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                            Embeded Software Development <span class="iot-mobile-icon">-</span>
+                        </button>
+                    </h3>
+                </div>
+                <div id="collapseFive" class="collapse" aria-labelledby="headingFive"
+                    data-parent="#accordionExample">
+                    <div class="iot-mobile-card-body">
+                        <p>Custom web development is a vital service that ClickDex Agency provides. We design and
+                            advance software for specific areas, and goods made available over the internet. These
+                            applications run on remote web servers, not on native OS devices. Additionally, they
+                            facilitate real-time interactions and updating, making them highly efficient and interactive
+                            for the end-user.</p>
+                        <ul class="custom-list">
+                            <li><span>Advanced Development Approach</span></li>
+                            <li><span>User-Driven Ideology</span></li>
+                            <li><span>Better Performance Guarantee</span></li>
+                            <li><span>Post Launch Support </span></li>
+                            <li><span>Flexible Engagement Model</span></li>
+                            <li><span>All-in-One: From Development</span></li>
+                        </ul>
+                        <a href="#" class="btn iot-mobile-button">Discover Our Service</a>
+
+                    </div>
+                </div>
+            </div>
+            <div class="iot-mobile-card">
+                <div class="iot-mobile-card-header" id="headingSix">
+                    <h3 class="mb-0">
+                        <button class="btn btn-link collapsed iot-mobile-btn" type="button" data-toggle="collapse"
+                            data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                            IoT App Development <span class="iot-mobile-icon">-</span>
+                        </button>
+                    </h3>
+                </div>
+                <div id="collapseSix" class="collapse" aria-labelledby="headingSix"
+                    data-parent="#accordionExample">
+                    <div class="iot-mobile-card-body">
+                        <p>Custom web development is a vital service that ClickDex Agency provides. We design and
+                            advance software for specific areas, and goods made available over the internet. These
+                            applications run on remote web servers, not on native OS devices. Additionally, they
+                            facilitate real-time interactions and updating, making them highly efficient and interactive
+                            for the end-user.</p>
+                        <ul class="custom-list">
+                            <li><span>Advanced Development Approach</span></li>
+                            <li><span>User-Driven Ideology</span></li>
+                            <li><span>Better Performance Guarantee</span></li>
+                            <li><span>Post Launch Support </span></li>
+                            <li><span>Flexible Engagement Model</span></li>
+                            <li><span>All-in-One: From Development</span></li>
+                        </ul>
+                        <a href="#" class="btn iot-mobile-button">Discover Our Service</a>
+
+                    </div>
+                </div>
+            </div>
+            <div class="iot-mobile-card">
+                <div class="iot-mobile-card-header" id="headingSeven">
+                    <h3 class="mb-0">
+                        <button class="btn btn-link collapsed iot-mobile-btn" type="button" data-toggle="collapse"
+                            data-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                            IoT Integration <span class="iot-mobile-icon">-</span>
+                        </button>
+                    </h3>
+                </div>
+                <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven"
+                    data-parent="#accordionExample">
+                    <div class="iot-mobile-card-body">
+                        <p>Custom web development is a vital service that ClickDex Agency provides. We design and
+                            advance software for specific areas, and goods made available over the internet. These
+                            applications run on remote web servers, not on native OS devices. Additionally, they
+                            facilitate real-time interactions and updating, making them highly efficient and interactive
+                            for the end-user.</p>
+                        <ul class="custom-list">
+                            <li><span>Advanced Development Approach</span></li>
+                            <li><span>User-Driven Ideology</span></li>
+                            <li><span>Better Performance Guarantee</span></li>
+                            <li><span>Post Launch Support </span></li>
+                            <li><span>Flexible Engagement Model</span></li>
+                            <li><span>All-in-One: From Development</span></li>
+                        </ul>
+                        <a href="#" class="btn iot-mobile-button">Discover Our Service</a>
+
+                    </div>
+                </div>
+            </div>
+            <div class="iot-mobile-card">
+                <div class="iot-mobile-card-header" id="headingEight">
+                    <h3 class="mb-0">
+                        <button class="btn btn-link collapsed iot-mobile-btn" type="button" data-toggle="collapse"
+                            data-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                            IoT Testing and Maintenance <span class="iot-mobile-icon">-</span>
+                        </button>
+                    </h3>
+                </div>
+                <div id="collapseEight" class="collapse" aria-labelledby="headingEight"
+                    data-parent="#accordionExample">
+                    <div class="iot-mobile-card-body">
+                        <p>Custom web development is a vital service that ClickDex Agency provides. We design and
+                            advance software for specific areas, and goods made available over the internet. These
+                            applications run on remote web servers, not on native OS devices. Additionally, they
+                            facilitate real-time interactions and updating, making them highly efficient and interactive
+                            for the end-user.</p>
+                        <ul class="custom-list">
+                            <li><span>Advanced Development Approach</span></li>
+                            <li><span>User-Driven Ideology</span></li>
+                            <li><span>Better Performance Guarantee</span></li>
+                            <li><span>Post Launch Support </span></li>
+                            <li><span>Flexible Engagement Model</span></li>
+                            <li><span>All-in-One: From Development</span></li>
+                        </ul>
+                        <a href="#" class="btn iot-mobile-button">Discover Our Service</a>
+
+                    </div>
+                </div>
+            </div>
+            <div class="iot-mobile-card">
+                <div class="iot-mobile-card-header" id="headingNine">
+                    <h3 class="mb-0">
+                        <button class="btn btn-link collapsed iot-mobile-btn" type="button" data-toggle="collapse"
+                            data-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+                            IoT Consulting <span class="iot-mobile-icon">-</span>
+                        </button>
+                    </h3>
+                </div>
+                <div id="collapseNine" class="collapse" aria-labelledby="headingNine"
+                    data-parent="#accordionExample">
+                    <div class="iot-mobile-card-body">
+                        <p>Custom web development is a vital service that ClickDex Agency provides. We design and
+                            advance software for specific areas, and goods made available over the internet. These
+                            applications run on remote web servers, not on native OS devices. Additionally, they
+                            facilitate real-time interactions and updating, making them highly efficient and interactive
+                            for the end-user.</p>
+                        <ul class="custom-list">
+                            <li><span>Advanced Development Approach</span></li>
+                            <li><span>User-Driven Ideology</span></li>
+                            <li><span>Better Performance Guarantee</span></li>
+                            <li><span>Post Launch Support </span></li>
+                            <li><span>Flexible Engagement Model</span></li>
+                            <li><span>All-in-One: From Development</span></li>
+                        </ul>
+                        <a href="#" class="btn iot-mobile-button">Discover Our Service</a>
+
+                    </div>
+                </div>
+            </div>
+            <!-- Add more cards as needed -->
+        </div>
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+        $('.collapse').on('show.bs.collapse', function () {
+            $(this).prev('.iot-mobile-card-header').find('.iot-mobile-icon').text('-');
+            $(this).prev('.iot-mobile-card-header').find('.iot-mobile-btn').addClass('active');
+        });
+
+        $('.collapse').on('hide.bs.collapse', function () {
+            $(this).prev('.iot-mobile-card-header').find('.iot-mobile-icon').text('+');
+            $(this).prev('.iot-mobile-card-header').find('.iot-mobile-btn').removeClass('active');
+        });
+
+        // Ensure the correct initial state
+        $('#accordionExample .collapse').each(function () {
+            if ($(this).hasClass('show')) {
+                $(this).prev('.iot-mobile-card-header').find('.iot-mobile-icon').text('-');
+                $(this).prev('.iot-mobile-card-header').find('.iot-mobile-btn').addClass('active');
+            } else {
+                $(this).prev('.iot-mobile-card-header').find('.iot-mobile-icon').text('+');
+                $(this).prev('.iot-mobile-card-header').find('.iot-mobile-btn').removeClass('active');
+            }
+        });
+    });
+</script>
+    <!-- iot development end -->
+
+
+    <!-- previous work -->
+
+    <div class="container previouswork-container">
+        <h1 class="previouswork-heading"> The IoT Ecosystem We Use In Our <span class="previouswork-span">Previous
+                Work</span></h1>
+
+        <div class="row" style="margin-top: 40px !important;">
+            <div class="col-4 ">
+                <div class="previouswork-column">
+                    <div class="previouswork-section-title">Programming Languages</div>
+                    <p class="previouswork-discription"> Core languages used for writing software that controls and
+                        collects
+                        data from IoT devices. </p>
+                    <ul class="category-list">
+                        <li> <span>Python </span></li>
+                        <li> <span>JavaScript </span></li>
+                        <li> <span>C++ </span></li>
+                        <li> <span>C </span></li>
+                        <li> <span>Java </span></li>
+                        <li> <span>Rust </span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-4 ">
+                <div class="previouswork-column">
+                    <div class="previouswork-section-title">IoT Platforms & Development Frameworks</div>
+                    <p class="previouswork-discription"> Platforms and tools that provide integrated services to
+                        develop,
+                        deploy, and manage IoT applications and devices.</p>
+
+                    <ul class="category-list">
+                        <li> <span>AWS IoT </span></li>
+                        <li> <span>Microsoft Azure IoT Suite </span></li>
+                        <li> <span>Google Cloud IoT </span></li>
+                        <li> <span>IBM Watson IoT </span></li>
+                        <li> <span>Arduino IoT Cloud </span></li>
+                        <li> <span>Node-RED </span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="previouswork-column">
+
+                    <div class="previouswork-section-title">Operating Systems and RTOS</div>
+                    <p class="previouswork-discription">Specialized operating systems designed to run on IoT devices,
+                        often
+                        with real-time processing capabilities </p>
+
+                    <ul class="category-list">
+                        <li><span>Raspbian for Raspberry Pi</span></li>
+                        <li><span>Ubuntu Core</span></li>
+                        <li><span>Windows IoT Core</span></li>
+                        <li><span>Zephyr</span></li>
+                        <li><span>Mbed OS</span></li>
+                        <li><span>Contiki</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="row" style="margin-top: 30px !important;">
+            <div class="col-4">
+                <div class="previouswork-column">
+
+                    <div class="previouswork-section-title">Communication Protocols & Connectivity</div>
+                    <p class="previouswork-discription"> Rules and standards that enable IoT devices to exchange data
+                        and
+                        communicate with each other and with the cloud. </p>
+
+                    <ul class="category-list">
+                        <li><span>MQTT</span></li>
+                        <li><span>CoAP</span></li>
+                        <li><span>AMQP</span></li>
+                        <li><span>HTTP/HTTPS</span></li>
+                        <li><span>Thread</span></li>
+                        <li><span>Zigbee</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="previouswork-column">
+
+                    <div class="previouswork-section-title">Hardware Platforms</div>
+                    <p class="previouswork-discription"> The physical boards and modules on which IoT applications are
+                        built.</p>
+
+                    <ul class="category-list">
+                        <li><span>Arduino </span></li>
+                        <li><span>Raspberry Pi </span></li>
+                        <li><span>ESP32 </span></li>
+                        <li><span>BeagleBone </span></li>
+                        <li><span>Adafruit Feather </span></li>
+                        <li><span>Particle Photon </span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="previouswork-column">
+
+                    <div class="previouswork-section-title">Security & Device Management</div>
+                    <p class="previouswork-discription"> Tools & protocols ensure secure data transmission and provide
+                        and
+                        & update IoT devices remotely.</p>
+
+                    <ul class="category-list">
+                        <li> <span>OpenSSL </span></li>
+                        <li> <span>Arm's Platform Security Architecture (PSA) </span></li>
+                        <li> <span>Balena </span></li>
+                        <li> <span>Particle </span></li>
+                        <li> <span>Cisco Jasper </span></li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <div class="container previous-work-mobile-container">
+        <h1>The IoT Ecosystem We Use In Our <span class="previous-work-mobile-span">Previous Work</span></h1>
+
+        <div id="content1" class="previous-work-mobile-content-section previous-work-mobile-active">
+            <h2>Programming Languages</h2>
+            <p>Lorem ipsum dolor sit amet. Non commodi aliquam qui voluptatem dignissimos sed modi nihil aut Quisni
+                porro id suscipit quam qui excepturi dolor ut quasini voluptatem! Sed molestias animi ad quos modi qui
+            </p>
+            <ul class="previous-work-mobile-content-section-ul">
+                <li><span>Python</span></li>
+                <li><span>JavaScript</span></li>
+                <li><span>C++</span></li>
+                <li><span>C</span></li>
+                <li><span>Rust</span></li>
+                <li><span>Java</span></li>
+            </ul>
+        </div>
+
+        <div id="content2" class="previous-work-mobile-content-section previous-work-mobile-active">
+            <h2>IoT Platforms & Development Frameworks</h2>
+            <p>Lorem ipsum dolor sit amet. Non commodi aliquam qui voluptatem dignissimos sed modi nihil aut Quisni
+                porro id suscipit quam qui excepturi dolor ut quasini voluptatem! Sed molestias animi ad quos modi qui
+            </p>
+            <ul class="previous-work-mobile-content-section-ul">
+                <li><span>AWS IoT</span></li>
+                <li><span>Microsoft Azure IoT Suite</span></li>
+                <li><span>Google Cloud IoT</span></li>
+                <li><span>IBM Watson IoT</span></li>
+                <li><span>Arduino IoT Cloud</span></li>
+                <li><span>Node-RED</span></li>
+            </ul>
+        </div>
+
+        <div id="content3" class="previous-work-mobile-content-section">
+            <h2>Communication Protocols</h2>
+            <p>Lorem ipsum dolor sit amet. Non commodi aliquam qui voluptatem dignissimos sed modi nihil aut Quisni
+                porro id suscipit quam qui excepturi dolor ut quasini voluptatem! Sed molestias animi ad quos modi qui
+            </p>
+            <ul class="previous-work-mobile-content-section-ul">
+                <li><span>MQTT</span></li>
+                <li><span>CoAP</span></li>
+                <li><span>HTTP</span></li>
+                <li><span>LoRaWAN</span></li>
+                <li><span>Zigbee</span></li>
+            </ul>
+        </div>
+
+        <div id="content4" class="previous-work-mobile-content-section">
+            <h2>Hardware Components</h2>
+            <p>Lorem ipsum dolor sit amet. Non commodi aliquam qui voluptatem dignissimos sed modi nihil aut Quisni
+                porro id suscipit quam qui excepturi dolor ut quasini voluptatem! Sed molestias animi ad quos modi qui
+            </p>
+            <ul class="previous-work-mobile-content-section-ul">
+                <li><span>Sensors</span></li>
+                <li><span>Actuators</span></li>
+                <li><span>Microcontrollers</span></li>
+                <li><span>Development Boards</span></li>
+                <li><span>Gateways</span></li>
+            </ul>
+        </div>
+
+        <div id="content5" class="previous-work-mobile-content-section">
+            <h2>Cloud Services</h2>
+            <p>Lorem ipsum dolor sit amet. Non commodi aliquam qui voluptatem dignissimos sed modi nihil aut Quisni
+                porro id suscipit quam qui excepturi dolor ut quasini voluptatem! Sed molestias animi ad quos modi qui
+            </p>
+            <ul class="previous-work-mobile-content-section-ul">
+                <li><span>Amazon Web Services</span></li>
+                <li><span>Microsoft Azure</span></li>
+                <li><span>Google Cloud</span></li>
+                <li><span>IBM Cloud</span></li>
+                <li><span>Oracle Cloud</span></li>
+            </ul>
+        </div>
+
+        <div id="content6" class="previous-work-mobile-content-section">
+            <h2>Data Analytics</h2>
+            <p>Lorem ipsum dolor sit amet. Non commodi aliquam qui voluptatem dignissimos sed modi nihil aut Quisni
+                porro id suscipit quam qui excepturi dolor ut quasini voluptatem! Sed molestias animi ad quos modi qui
+            </p>
+            <ul class="previous-work-mobile-content-section-ul">
+                <li><span>Big Data</span></li>
+                <li><span>Machine Learning</span></li>
+                <li><span>Data Visualization</span></li>
+                <li><span>Predictive Analytics</span></li>
+                <li><span>Real-time Analytics</span></li>
+            </ul>
+        </div>
+
+        <div class="previous-work-mobile-arrows">
+            <img src="./iotimages/leftarrow_dark.png" class="previous-work-mobile-arrow" id="prevArrow">
+            <img src="./iotimages/rightarrow_dark.png" class="previous-work-mobile-arrow" id="nextArrow">
+        </div>
+    </div>
+
+    <script>
+        let currentStartIndex = 1;
+        const totalContent = 6;
+
+        function updateContentDisplay() {
+            for (let i = 1; i <= totalContent; i++) {
+                document.getElementById(`content${i}`).classList.remove('previous-work-mobile-active');
+            }
+            document.getElementById(`content${currentStartIndex}`).classList.add('previous-work-mobile-active');
+            document.getElementById(`content${currentStartIndex + 1}`).classList.add('previous-work-mobile-active');
+
+            // Update arrow images
+            if (currentStartIndex > 1) {
+                document.getElementById('prevArrow').src = './iotimages/leftarrow_dark.png';
+            } else {
+                document.getElementById('prevArrow').src = './iotimages/leftarrow_lite.png';
+            }
+
+            if (currentStartIndex < totalContent - 1) {
+                document.getElementById('nextArrow').src = './iotimages/rightarrow_dark.png';
+            } else {
+                document.getElementById('nextArrow').src = './iotimages/rightarrow_lite.png';
+            }
+        }
+
+        document.getElementById('prevArrow').addEventListener('click', () => {
+            if (currentStartIndex > 1) {
+                currentStartIndex--;
+                updateContentDisplay();
+            }
+        });
+
+        document.getElementById('nextArrow').addEventListener('click', () => {
+            if (currentStartIndex < totalContent - 1) {
+                currentStartIndex++;
+                updateContentDisplay();
+            }
+        });
+
+        // Initial display
+        updateContentDisplay();
+    </script>
+
+
+
+    <!-- previouswork end -->
+
+
+
+    <!-- Various Domains start -->
+
+  
+    <div class="container choosing-devops-consultation-container">
+        <div class="choosing-devops-consultation">
+            <div class="choosing-devops-consultation-heading">
+                <h1>Application of IoT In <span style="color: #2CA068;">Various Domains</span></h1>
+            </div>
+
+            <div class="row consultation-box ">
+                <div class="col-lg-4 col-md-6 col-sm-12 ">
+                    <div class="column column-benefits">
+                        <div class="column-details">
+                            <span class="material-symbols-outlined">
+                                close_fullscreen
+                            </span>
+                            <h5 class="column-heading">Scalability</h5>
+                            <p class="column-paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                eiusmod tempor incididunt ut labor dolore magna aliqua. Ut enim ad minim veniam, quis
+                                nostrud exercitation ullamco laboris nisi.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="column column-benefits">
+                        <div class="column-details">
+                            <span class="material-symbols-outlined">
+                                task_alt
+                            </span>
+                            <h5 class="column-heading">Data Security & Privacy</h5>
+                            <p class="column-paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                eiusmod tempor incididunt ut labor dolore magna aliqua. Ut enim ad minim veniam, quis
+                                nostrud exercitation ullamco laboris nisi.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="column column-benefits">
+                        <div class="column-details">
+                            <span class="material-symbols-outlined">
+                                flash_on
+                            </span>
+                            <h5 class="column-heading">Faster Delivery</h5>
+                            <p class="column-paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                eiusmod tempor incididunt ut labor dolore magna aliqua. Ut enim ad minim veniam, quis
+                                nostrud exercitation ullamco laboris nisi.</p>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="column column-benefits">
+                        <div class="column-details">
+                            <span class="material-symbols-outlined">
+                                code_off
+                            </span>
+                            <h5 class="column-heading">Development Flexibility</h5>
+                            <p class="column-paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                eiusmod tempor incididunt ut labor dolore magna aliqua. Ut enim ad minim veniam, quis
+                                nostrud exercitation ullamco laboris nisi.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="column column-benefits">
+                        <div class="column-details">
+                            <span class="material-symbols-outlined">
+                                cached
+                            </span>
+                            <h5 class="column-heading">Accessibility & Mobility</h5>
+                            <p class="column-paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                eiusmod tempor incididunt ut labor dolore magna aliqua. Ut enim ad minim veniam, quis
+                                nostrud exercitation ullamco laboris nisi.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="column column-benefits">
+                        <div class="column-details">
+                            <span class="material-symbols-outlined">
+                                attach_money
+                            </span>
+                            <h5 class="column-heading">Cost Efficiency</h5>
+                            <p class="column-paragraph">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                eiusmod tempor incididunt ut labor dolore magna aliqua. Ut enim ad minim veniam, quis
+                                nostrud exercitation ullamco laboris nisi.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div> 
+    <!-- Various Domains end -->
+
+    <!-- we offer start -->
+
+    <div class="container Engagement-Models-container">
+        <div class="Engagement-Models-maindiv">
+            <div class="row ">
+                <div class="col">
+                    <h1 class="text-left Engagement-Models-heading">Engagement Models <span
+                            class="Engagement-Models-heading-span">We Offer</span></h1>
+                </div>
+            </div>
+
+            <div class="Engagement-Models-card-layout">
+                <div class="row  ">
+
+
+                    <div class="col-md-4">
+                        <div class="Engagement-Models-innercards">
+                            <h2 class="Engagement-Models-innercardsheading">Staff Augmentation</h2>
+                            <p class="Engagement-Models-innercardsparagraph">Lorem ipsum dolor sit amet. Non commodi
+                                aliquam qui voluptatem dignissimos sed modi nihil aut Quis porro id suscipit quam qui
+                                excepturi dolor ut quasci voluptatem! Sed molestias animi ad quos modi qui. Lorem ipsum
+                                dolor sit amet. Non commodi aliquam qui voluptatem dignissi mos sed modi nihil aut
+                                Quisni porro id. Non commodi aliquam qui voluptatem dignissi mos sed modi nihil aut
+                                Quisni porro id.</p>
+
+                            <div class="row Engagement-Models-cardlist">
+                                <div class="col-1"><i class="bi bi-check-circle-fill custom-check-circle"></i></div>
+                                <p class="col">Agile processes</p>
+                            </div>
+                            <div class="row Engagement-Models-cardlist">
+                                <div class="col-1"><i class="bi bi-check-circle-fill custom-check-circle"></i></div>
+                                <p class="col">Transparent pricing</p>
+                            </div>
+                            <div class="row Engagement-Models-cardlist">
+                                <div class="col-1"><i class="bi bi-check-circle-fill custom-check-circle"></i></div>
+                                <p class="col">Monthly billing</p>
+                            </div>
+                            <div class="row Engagement-Models-cardlist">
+                                <div class="col-1"><i class="bi bi-check-circle-fill custom-check-circle"></i></div>
+                                <p class="col">Maximum flexibility</p>
+                            </div>
+                            <div class="row Engagement-Models-cardlist">
+                                <div class="col-1"><i class="bi bi-check-circle-fill custom-check-circle"></i></div>
+                                <p class="col">Suitable for startups, MVPs and software/product companies</p>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="Engagement-Models-innercards">
+                            <h2 class="Engagement-Models-innercardsheading">Dedicated Team</h2>
+                            <p class="Engagement-Models-innercardsparagraph">Lorem ipsum dolor sit amet. Non commodi
+                                aliquam qui voluptatem dignissimos sed modi nihil aut Quis porro id suscipit quam qui
+                                excepturi dolor ut quasci voluptatem! Sed molestias animi ad quos modi qui. Lorem ipsum
+                                dolor sit amet. Non commodi aliquam qui voluptatem dignissi mos sed modi nihil aut
+                                Quisni porro id. Non commodi aliquam qui voluptatem dignissi mos sed modi nihil aut
+                                Quisni porro id.</p>
+                            <div class="row Engagement-Models-cardlist">
+                                <div class="col-1"><i class="bi bi-check-circle-fill custom-check-circle"></i></div>
+                                <p class="col ">Agile processes</p>
+                            </div>
+                            <div class="row Engagement-Models-cardlist">
+                                <div class="col-1"><i class="bi bi-check-circle-fill custom-check-circle"></i></div>
+                                <p class="col">Transparent pricing</p>
+                            </div>
+                            <div class="row Engagement-Models-cardlist">
+                                <div class="col-1"><i class="bi bi-check-circle-fill custom-check-circle"></i></div>
+                                <p class="col">Monthly billing</p>
+                            </div>
+                            <div class="row Engagement-Models-cardlist">
+                                <div class="col-1"><i class="bi bi-check-circle-fill custom-check-circle"></i></div>
+                                <p class="col">Maximum flexibility</p>
+                            </div>
+                            <div class="row Engagement-Models-cardlist">
+                                <div class="col-1"><i class="bi bi-check-circle-fill custom-check-circle"></i></div>
+                                <p class="col">Suitable for startups, MVPs and software/product companies</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="Engagement-Models-innercards">
+                            <h2 class="Engagement-Models-innercardsheading">Full Process Outsourcing</h2>
+                            <p class="Engagement-Models-innercardsparagraph">Lorem ipsum dolor sit amet. Non commodi
+                                aliquam qui voluptatem dignissimos sed modi nihil aut Quis porro id suscipit quam qui
+                                excepturi dolor ut quasci voluptatem! Sed molestias animi ad quos modi qui. Lorem ipsum
+                                dolor sit amet. Non commodi aliquam qui voluptatem dignissi mos sed modi nihil aut
+                                Quisni porro id. Non commodi aliquam qui voluptatem dignissi mos sed modi nihil aut
+                                Quisni porro id.</p>
+
+                            <div class="row Engagement-Models-cardlist">
+                                <div class="col-1"><i class="bi bi-check-circle-fill custom-check-circle"></i></div>
+                                <p class="col">Agile processes</p>
+                            </div>
+                            <div class="row Engagement-Models-cardlist">
+                                <div class="col-1"><i class="bi bi-check-circle-fill custom-check-circle"></i></div>
+                                <p class="col">Transparent pricing</p>
+                            </div>
+                            <div class="row Engagement-Models-cardlist">
+                                <div class="col-1"><i class="bi bi-check-circle-fill custom-check-circle"></i></div>
+                                <p class="col">Monthly billing</p>
+                            </div>
+                            <div class="row Engagement-Models-cardlist">
+                                <div class="col-1"><i class="bi bi-check-circle-fill custom-check-circle"></i></div>
+                                <p class="col">Maximum flexibility</p>
+                            </div>
+                            <div class="row Engagement-Models-cardlist">
+                                <div class="col-1"><i class="bi bi-check-circle-fill custom-check-circle"></i></div>
+                                <p class="col">Suitable for startups, MVPs and software/product companies</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mt-5">
+                    <div class="col Engagement-Models-button">
+                        <button class="btn btn-primary">Discuss More</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> 
+    <!-- we offer end -->
+
+    <!-- trends start -->
+    
+    <div class="webapp_section_8_layout">
+        <div class="container">
+            <img src="./iotimages/Ellipse 201.png" class="webapp_section_8_topellipse" />
+            <img src="./iotimages/Ellipse 207.png" class="webapp_section_8_ellipse207" />
+            <img src="./iotimages/Ellipse 206.png" class="webapp_section_8_ellipse206" />
+            <img src="./iotimages/Ellipse 204.png" class="webapp_section_8_ellipse204" />
+            <img src="./iotimages/Ellipse 205.png" class="webapp_section_8_ellipse205" />
+            <div class="webapp_section_8_mainheading">
+                <h1 class="webapp_section_8_webdev">
+                    Emerging Trends In <span class="webapp_section_8_webdevbenefits"> IoT Development</span>
+                    <img src="./iotimages/Rectangle 81.png" class="webapp_section_8_rectangle_line" />
+                    <img src="./iotimages/650bad7162f5ee5958609e10_WCU Shape Image 1 1.png"
+                        class="webapp_section_8_shape_image" />
+                </h1>
+            </div>
+            <div class="row">
+                <div class="col-md-4 webapp_section_8_center1">
+                    <img src="./iotimages/IoT development image.png" class="webapp_section_8_image1" />
+                </div>
+                <div class="col-md-4">
+                    <div class="webapp_section_8_right">
+                        <div class="leftsidefirstcol">
+                            <img src="./iotimages/greentick.png" class="webapp_section_8_leftsideimage" />
+                            <p class="webapp_section_8_leftsideheading">AL/Machine Learning</p>
+                            <p class="webapp_section_8_leftsidepara">Only an integrated cloud-based security stack is
+                                capable of providing the centralized visibility of cloud resources and data that is
+                                vital for defending.</p>
+                        </div>
+                        <div class="leftsidesecondcol">
+                            <img src="./iotimages/greentick.png" class="webapp_section_8_leftsideimage" />
+                            <p class="webapp_section_8_leftsideheading">AR/VR Technologies</p>
+                            <p class="webapp_section_8_leftsidepara">Only an integrated cloud-based security stack is
+                                capable of providing the centralized visibility of cloud resources and data that is
+                                vital for defending.</p>
+                        </div>
+                        <div class="leftsidethirdcol">
+                            <img src="./iotimages/greentick.png" class="webapp_section_8_leftsideimage" />
+                            <p class="webapp_section_8_leftsideheading">Big Date</p>
+                            <p class="webapp_section_8_leftsidepara">Only an integrated cloud-based security stack is
+                                capable of providing the centralized visibility of cloud resources and data that is
+                                vital for defending.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 webapp_section_8_center">
+                    <img src="./iotimages/IoT development image.png" class="webapp_section_8_image" />
+                </div>
+                <div class="col-md-4">
+                    <div class="webapp_section_8_right">
+                        <div class="leftsidefirstcol">
+                            <img src="./iotimages/greentick.png" class="webapp_section_8_leftsideimage" />
+                            <p class="webapp_section_8_leftsideheading">Blockchain Security</p>
+                            <p class="webapp_section_8_leftsidepara">Only an integrated cloud-based security stack is
+                                capable of providing the centralized visibility of cloud resources and data that is
+                                vital for defending.</p>
+                        </div>
+                        <div class="leftsidesecondcol">
+                            <img src="./iotimages/greentick.png" class="webapp_section_8_leftsideimage" />
+                            <p class="webapp_section_8_leftsideheading">Cryptocurrency </p>
+                            <p class="webapp_section_8_leftsidepara">Only an integrated cloud-based security stack is
+                                capable of providing the centralized visibility of cloud resources and data that is
+                                vital for defending.</p>
+                        </div>
+                        <div class="leftsidethirdcol">
+                            <img src="./iotimages/greentick.png" class="webapp_section_8_leftsideimage" />
+                            <p class="webapp_section_8_leftsideheading">Nano Technologies</p>
+                            <p class="webapp_section_8_leftsidepara">Only an integrated cloud-based security stack is
+                                capable of providing the centralized visibility of cloud resources and data that is
+                                vital for defending.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <img src="./iotimages/Ellipse 203.png" class="webapp_section_8_ellipse203" />
+        </div>
+    </div> 
+    <!-- trends end -->
+
+    <!-- iot start -->
+        
+    <div class="container iot-container">
+        <div class="iot-header"> IoT Development based <span class="iot-header-span">Industries</span></div>
+        <p class="iot-description">Only an integrated cloud-based security stack is capable of providing the centralized
+            visibility of cloud resources and data that is vital for defending against breaches and other potential
+            threats. Only an integrated cloud-based security stack is capable of providing the centralized visibility of
+            cloud resources.</p>
+
+        <div class=" container main-container">
+            <div class=" card iot-card iot-card1">
+                <h2>Healthcare</h2>
+                <p>Lorem ipsum dolor sit amet. Non commodi aliquam qui voluptatem dignissimos sed modi nihil aut Quis
+                    porro
+                    id suscipit quam qui excepturi dolor ut quasci voluptatem! Sed molestias animi ad quos modi qui.
+                    Lorem
+                    ipsum dolor sit amet. Non commodi aliquam qui voluptatem dignissi mos sed modi nihil aut Quisni
+                    porro
+                    id. Non commodi aliquam qui voluptatem dignissi mos sed modi nihil aut Quisni porro id. Lorem ipsum
+                    dolor sit amet. </p>
+                <a href="#">Read more</a>
+            </div>
+            <div class=" card iot-card iot-card2">
+                <h2>Finance & Banking</h2>
+                <p>Lorem ipsum dolor sit amet. Non commodi aliquam qui voluptatem dignissimos sed modi nihil aut Quis
+                    porro
+                    id suscipit quam qui excepturi dolor ut quasci voluptatem! Sed molestias animi ad quos modi qui.
+                    Lorem
+                    ipsum dolor sit amet. Non commodi aliquam qui voluptatem dignissi mos sed modi nihil aut Quisni
+                    porro
+                    id. Non commodi aliquam qui voluptatem dignissi mos sed modi nihil aut Quisni porro id. Lorem ipsum
+                    dolor sit amet. </p>
+                <a href="#">Read more</a>
+            </div>
+            <div class=" card iot-card iot-card3">
+                <h2>Travel</h2>
+                <p>Lorem ipsum dolor sit amet. Non commodi aliquam qui voluptatem dignissimos sed modi nihil aut Quis
+                    porro
+                    id suscipit quam qui excepturi dolor ut quasci voluptatem! Sed molestias animi ad quos modi qui.
+                    Lorem
+                    ipsum dolor sit amet. Non commodi aliquam qui voluptatem dignissi mos sed modi nihil aut Quisni
+                    porro
+                    id. Non commodi aliquam qui voluptatem dignissi mos sed modi nihil aut Quisni porro id. Lorem ipsum
+                    dolor sit amet. </p>
+                <a href="#">Read more</a>
+            </div>
+            <div class=" card iot-card iot-card4">
+                <h2>E-learning</h2>
+                <p>Lorem ipsum dolor sit amet. Non commodi aliquam qui voluptatem dignissimos sed modi nihil aut Quis
+                    porro
+                    id suscipit quam qui excepturi dolor ut quasci voluptatem! Sed molestias animi ad quos modi qui.
+                    Lorem
+                    ipsum dolor sit amet. Non commodi aliquam qui voluptatem dignissi mos sed modi nihil aut Quisni
+                    porro
+                    id. Non commodi aliquam qui voluptatem dignissi mos sed modi nihil aut Quisni porro id. Lorem ipsum
+                    dolor sit amet. </p>
+                <a href="#">Read more</a>
+            </div>
+            <div class=" card iot-card iot-card5">
+                <h2>Card 5 Heading</h2>
+                <p>Lorem ipsum dolor sit amet. Non commodi aliquam qui voluptatem dignissimos sed modi nihil aut Quis
+                    porro
+                    id suscipit quam qui excepturi dolor ut quasci voluptatem! Sed molestias animi ad quos modi qui.
+                    Lorem
+                    ipsum dolor sit amet. Non commodi aliquam qui voluptatem dignissi mos sed modi nihil aut Quisni
+                    porro
+                    id. Non commodi aliquam qui voluptatem dignissi mos sed modi nihil aut Quisni porro id. Lorem ipsum
+                    dolor sit amet. </p>
+                <a href="#">Read more</a>
+            </div>
+            <div class=" card iot-card iot-card6">
+                <h2>Card 6 Heading</h2>
+                <p>Lorem ipsum dolor sit amet. Non commodi aliquam qui voluptatem dignissimos sed modi nihil aut Quis
+                    porro
+                    id suscipit quam qui excepturi dolor ut quasci voluptatem! Sed molestias animi ad quos modi qui.
+                    Lorem
+                    ipsum dolor sit amet. Non commodi aliquam qui voluptatem dignissi mos sed modi nihil aut Quisni
+                    porro
+                    id. Non commodi aliquam qui voluptatem dignissi mos sed modi nihil aut Quisni porro id. Lorem ipsum
+                    dolor sit amet. </p>
+                <a href="#">Read more</a>
+            </div>
+            <div class=" card iot-card iot-card7">
+                <h2>Card 7 Heading</h2>
+                <p>Lorem ipsum dolor sit amet. Non commodi aliquam qui voluptatem dignissimos sed modi nihil aut Quis
+                    porro
+                    id suscipit quam qui excepturi dolor ut quasci voluptatem! Sed molestias animi ad quos modi qui.
+                    Lorem
+                    ipsum dolor sit amet. Non commodi aliquam qui voluptatem dignissi mos sed modi nihil aut Quisni
+                    porro
+                    id. Non commodi aliquam qui voluptatem dignissi mos sed modi nihil aut Quisni porro id. Lorem ipsum
+                    dolor sit amet. </p>
+                <a href="#">Read more</a>
+            </div>
+        </div>
+    </div> 
+    <!-- iot end -->
+
+    <!-- our case start -->
+
+  
+    <div class="container case-container">
+        <div class="row">
+            <div class="col-5" style="margin-top: 15% !important;">
+                <h1 class="our-case-header">Our <span class="our-case-header-span"> Case Studies </span></h1>
+                <p class="our-case-header-description"> At JustLogix, we specialize in providing cutting-edge IT
+                    solutions across a multitude of industries, fostering innovation, growth, and digital transformation
+                    worldwide.</p>
+            </div>
+            <div class="col-7">
+                <div id="cardGroup1" class="row card-group active">
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="card case-maincard">
+                                <img src="./iotimages/Computer Vision.png" alt="Image Description" class="case-img">
+                                <div class="card-content">
+                                    <h2>Computer Vision</h2>
+                                    <p>We reinvent the eCommerce software solution experience with AI-driven chatbots
+                                        and intelligent virtual assistants that provide personalized customer.</p>
+                                    <a href="link">Read more <span> <img src="./iotimages/case-arrow.png"> </span> </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="card case-maincard">
+                                <img src="./iotimages/Cross-Chain Swaps.png" alt="Image Description" class="case-img">
+                                <div class="card-content">
+                                    <h2>The Future of Cross-Chain Swaps </h2>
+                                    <p>We reinvent the eCommerce software solution experience with AI-driven chatbots
+                                        and intelligent virtual assistants that provide personalized customer.</p>
+                                    <a href="link">Read more <span> <img src="./iotimages/case-arrow.png"> </span> </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="cardGroup2" class="row card-group">
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="card case-maincard">
+                                <img src="./iotimages/Computer Vision.png" alt="Image Description" class="case-img">
+                                <div class="card-content">
+                                    <h2>Computer Vision2</h2>
+                                    <p>We reinvent the eCommerce software solution experience with AI-driven chatbots
+                                        and intelligent virtual assistants that provide personalized customer.</p>
+                                    <a href="link">Read more <span> <img src="./iotimages/case-arrow.png"> </span> </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="card case-maincard">
+                                <img src="./iotimages/Cross-Chain Swaps.png" alt="Image Description" class="case-img">
+                                <div class="card-content">
+                                    <h2>The Future of Cross-Chain Swaps2 </h2>
+                                    <p>We reinvent the eCommerce software solution experience with AI-driven chatbots
+                                        and intelligent virtual assistants that provide personalized customer.</p>
+                                    <a href="link">Read more <span> <img src="./iotimages/case-arrow.png"> </span> </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="cardGroup3" class="row card-group">
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="card case-maincard">
+                                <img src="./iotimages/Computer Vision.png" alt="Image Description" class="case-img">
+                                <div class="card-content">
+                                    <h2>Computer Vision3</h2>
+                                    <p>We reinvent the eCommerce software solution experience with AI-driven chatbots
+                                        and intelligent virtual assistants that provide personalized customer.</p>
+                                    <a href="link">Read more <span> <img src="./iotimages/case-arrow.png"> </span> </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="card case-maincard">
+                                <img src="./iotimages/Cross-Chain Swaps.png" alt="Image Description" class="case-img">
+                                <div class="card-content">
+                                    <h2>The Future of Cross-Chain Swaps3 </h2>
+                                    <p>We reinvent the eCommerce software solution experience with AI-driven chatbots
+                                        and intelligent virtual assistants that provide personalized customer.</p>
+                                    <a href="link">Read more <span> <img src="./iotimages/case-arrow.png"> </span> </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="cardGroup4" class="row card-group">
+                    <div class="row">
+                        <div class="col-6">
+                            <div class="card case-maincard">
+                                <img src="./iotimages/Computer Vision.png" alt="Image Description" class="case-img">
+                                <div class="card-content">
+                                    <h2>Computer Vision4</h2>
+                                    <p>We reinvent the eCommerce software solution experience with AI-driven chatbots
+                                        and intelligent virtual assistants that provide personalized customer.</p>
+                                    <a href="link">Read more <span> <img src="./iotimages/case-arrow.png"> </span> </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="card case-maincard">
+                                <img src="./iotimages/Cross-Chain Swaps.png" alt="Image Description" class="case-img">
+                                <div class="card-content">
+                                    <h2>The Future of Cross-Chain Swaps4 </h2>
+                                    <p>We reinvent the eCommerce software solution experience with AI-driven chatbots
+                                        and intelligent virtual assistants that provide personalized customer.</p>
+                                    <a href="link">Read more <span> <img src="./iotimages/case-arrow.png"> </span> </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="our-case-button">
+                    <button id="btn1" class="btn case-button"></button>
+                    <button id="btn2" class="btn case-button"></button>
+                    <button id="btn3" class="btn case-button"></button>
+                    <button id="btn4" class="btn case-button"></button>
+                </div>
+            </div>
+        </div>
+    </div> 
+
+    <script>
+        // Get references to buttons and card groups
+        const btn1 = document.getElementById('btn1');
+        const btn2 = document.getElementById('btn2');
+        const btn3 = document.getElementById('btn3');
+        const btn4 = document.getElementById('btn4');
+
+        const cardGroup1 = document.getElementById('cardGroup1');
+        const cardGroup2 = document.getElementById('cardGroup2');
+        const cardGroup3 = document.getElementById('cardGroup3');
+        const cardGroup4 = document.getElementById('cardGroup4');
+
+        const cardGroups = [cardGroup1, cardGroup2, cardGroup3, cardGroup4];
+        const buttons = [btn1, btn2, btn3, btn4];
+        let currentGroupIndex = 0;
+        let autoCycleInterval;
+
+        // Function to show cards
+        function showCards(cardGroup) {
+            cardGroup.classList.add('active');
+        }
+
+        // Function to hide cards
+        function hideCards(...cardGroups) {
+            cardGroups.forEach(cardGroup => {
+                cardGroup.classList.remove('active');
+            });
+        }
+
+        // Function to set active button
+        function setActiveButton(index) {
+            buttons.forEach((button, i) => {
+                if (i === index) {
+                    button.classList.add('active');
+                } else {
+                    button.classList.remove('active');
+                }
+            });
+        }
+
+        // Function to cycle to the next card group
+        function cycleCards() {
+            hideCards(...cardGroups);
+            showCards(cardGroups[currentGroupIndex]);
+            setActiveButton(currentGroupIndex);
+            currentGroupIndex = (currentGroupIndex + 1) % cardGroups.length;
+        }
+
+        // Function to start automatic cycling
+        function startAutoCycle() {
+            autoCycleInterval = setInterval(cycleCards, 3000); // Change every 3 seconds
+        }
+
+        // Function to stop automatic cycling
+        function stopAutoCycle() {
+            clearInterval(autoCycleInterval);
+        }
+
+        // Add click event listeners to buttons
+        buttons.forEach((button, index) => {
+            button.addEventListener('click', () => {
+                stopAutoCycle();
+                hideCards(...cardGroups);
+                showCards(cardGroups[index]);
+                setActiveButton(index);
+                currentGroupIndex = index;
+            });
+        });
+
+        // Start automatic cycling on page load
+        startAutoCycle();
+        // Set initial active button and show the first card group
+        setActiveButton(0);
+        showCards(cardGroup1);
+    </script>
+
+
+
+<div class="container case-studies-mobile-main-container">
+    <h1>Our <span class="case-studies-mobile-span">Case Studies</span> </h1>
+    <p>
+        At JustLogix, we specialize in providing cutting-edge IT solutions across a multitude of industries,
+        fostering innovation, growth, and digital transformation worldwide. Duis aute irure dolor in 
+        reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+    </p>
+    
+    <div class="case-studies-mobile-container">
+        <div class="case-studies-mobile">
+            <div class="case-studies-mobile-card">
+                <div class="card case-studies-mobile-card1">
+                    <img src="./iotimages/Computer Vision.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Computer Vision</h5>
+                        <p class="card-text">
+                            We reinvent the eCommerce software solution experience with AI-driven chatbots 
+                            and intelligent virtual assistants that provide personalized customer.
+                        </p>
+                        <a href="link">Read more <span> <img src="./iotimages/case-arrow.png"> </span> </a>
+
+                    </div>
+                </div>
+            </div>
+            <div class="case-studies-mobile-card">
+                <div class="card case-studies-mobile-card1">
+                    <img src="./iotimages/Cross-Chain Swaps.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">The Future of Cross-Chain Swaps </h5>
+                        <p class="card-text">
+                            We reinvent the eCommerce software solution experience with AI-driven chatbots 
+                            and intelligent virtual assistants that provide personalized customer.
+                        </p>
+                        <a href="link">Read more <span> <img src="./iotimages/case-arrow.png"> </span> </a>
+
+                    </div>
+                </div>
+            </div>
+            <!-- Add more cards as needed -->
+        </div>
+        <div class="case-studies-mobile-arrows">
+            <img src="./iotimages/leftarrow_lite.png" class="case-studies-mobile-arrow" id="prevArrow1">
+            <img src="./iotimages/rightarrow_dark.png" class="case-studies-mobile-arrow" id="nextArrow1">
+        </div>
+    </div>
+</div>
+
+<script>
+    let currentIndexx = 0;
+    const totalCards = document.querySelectorAll('.case-studies-mobile-card').length;
+    const caseStudiesContainer = document.querySelector('.case-studies-mobile');
+
+    function updateCardDisplay() {
+        const offset = -currentIndexx * 100;
+        caseStudiesContainer.style.transform = `translateX(${offset}%)`;
+
+        // Update arrow images based on the current index
+        if (currentIndexx > 0) {
+            document.getElementById('prevArrow1').src = './iotimages/leftarrow_dark.png';
+        } else {
+            document.getElementById('prevArrow1').src = './iotimages/leftarrow_lite.png';
+        }
+
+        if (currentIndexx < totalCards - 1) {
+            document.getElementById('nextArrow1').src = './iotimages/rightarrow_dark.png';
+        } else {
+            document.getElementById('nextArrow1').src = './iotimages/rightarrow_lite.png';
+        }
+    }
+
+    document.getElementById('prevArrow1').addEventListener('click', () => {
+        if (currentIndexx > 0) {
+            currentIndexx--;
+            updateCardDisplay();
+        }
+    });
+
+    document.getElementById('nextArrow1').addEventListener('click', () => {
+        if (currentIndexx < totalCards - 1) {
+            currentIndexx++;
+            updateCardDisplay();
+        }
+    });
+
+    // Swipe functionality
+    let startX;
+    caseStudiesContainer.addEventListener('touchstart', (e) => {
+        startX = e.touches[0].clientX;
+    });
+
+    caseStudiesContainer.addEventListener('touchmove', (e) => {
+        const diffX = startX - e.touches[0].clientX;
+        if (diffX > 50 && currentIndexx < totalCards - 1) {
+            currentIndexx++;
+            updateCardDisplay();
+            startX = null;
+        } else if (diffX < -50 && currentIndexx > 0) {
+            currentIndexx--;
+            updateCardDisplay();
+            startX = null;
+        }
+    });
+
+    // Initial display
+    updateCardDisplay();
+</script>
+
+    <!-- our case end -->
+
+    <!-- client -->
+ 
+    <div class="client-main-div">
+        <div class="container">
+            <div class="row client-row">
+                <div class="col-md-6 col-12 client-col1">
+                    <h2 class="client-header">What Our <br>
+                        <span class="client-header-span">Valuable Client Says </span>
+                    </h2>
+                </div>
+             
+                <div class="col-md-6 col-12 client-col2">
+
+                    <div class="card client-card">
+
+                        <div class="card-body">
+                            <div class="row">
+
+                                <div class="col">
+                                    <div class="row client-row1 align-items-center">
+                                        <div class="col-auto pr-0">
+                                            <img src="./iotimages/p1.png" alt="tick" class="client-img">
+                                        </div>
+                                        <div class="col">
+                                            <p class="client-card-profilename mb-0">Joseph Franklo</p>
+                                            <p class="client-card-profile-discriiption">Director, Techinsiration LLC</p>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="container">
+                                            <p class="client-discription">“Justlogix has been able to ramp up their
+                                                teams
+                                                to meet our needs, new development initiatives. The code they
+                                                delivered was of high quality, and overall, the communication was very
+                                                good.”
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="client-arrow">
+                        <img src="./iotimages/left icon lite.png" class="client-arrow1" onclick="showPreviousProfile()">
+                        <img src="./iotimages/righticon dark.png" class="client-arrow2" onclick="showNextProfile()">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> 
+
+    <script>
+        // Array to store profiles
+        var profiles = [
+            {
+                name: "Joseph Franklo",
+                designation: "Director, Techinsiration LLC",
+                description: "Justlogix has been able to ramp up their teams to meet our needs, new development initiatives. The code they delivered was of high quality, and overall, the communication was very good.",
+                image: "./iotimages/p1.png"
+            },
+            {
+                name: "Joseph Franklo 1",
+                designation: "Director, Techinsiration LLC 1",
+                description: "Justlogix has been able to ramp up their teams to meet our needs, new development initiatives. The code they delivered was of high quality, and overall, the communication was very good.",
+                image: "./iotimages/p1.png"
+            },
+            {
+                name: "Joseph Franklo 2",
+                designation: "Director, Techinsiration LLC 2",
+                description: "Justlogix has been able to ramp up their teams to meet our needs, new development initiatives. The code they delivered was of high quality, and overall, the communication was very good.",
+                image: "./iotimages/p1.png"
+            }
+            // Add more profiles in the same format
+        ];
+
+        var currentIndex = 0;
+
+        function showPreviousProfile() {
+            if (currentIndex > 0) {
+                currentIndex--;
+                displayProfile("fade-out");
+            }
+        }
+
+        function showNextProfile() {
+            if (currentIndex < profiles.length - 1) {
+                currentIndex++;
+                displayProfile("fade-out");
+            }
+        }
+
+        function displayProfile(animationName) {
+            var profile = profiles[currentIndex];
+            var card = document.querySelector(".client-card");
+
+            // Apply animation class
+            card.classList.add(animationName);
+
+            // Delay resetting animation class and updating profile
+            setTimeout(() => {
+                card.classList.remove(animationName);
+                document.querySelector(".client-card-profilename").innerText = profile.name;
+                document.querySelector(".client-card-profile-discriiption").innerText = profile.designation;
+                document.querySelector(".client-discription").innerText = profile.description;
+                document.querySelector(".client-img").src = profile.image;
+
+                // Change arrow images based on availability of previous or next profiles
+                var prevArrow = document.querySelector(".client-arrow1");
+                var nextArrow = document.querySelector(".client-arrow2");
+                if (currentIndex === 0) {
+                    prevArrow.src = "./iotimages/left icon lite.png";
+                } else {
+                    prevArrow.src = "./iotimages/left icon dark.png";
+                }
+                if (currentIndex === profiles.length - 1) {
+                    nextArrow.src = "./iotimages/right icon lite.png";
+                } else {
+                    nextArrow.src = "./iotimages/righticon dark.png";
+                }
+
+                card.classList.add("fade-in"); // Add fadeIn class to smoothly fade in
+            }, 500);
+
+            // Remove fadeIn class after the transition
+            setTimeout(() => {
+                card.classList.remove("fade-in");
+            }, 1000); // Adjust timing based on your transition duration
+        }
+
+        // Display initial profile
+        displayProfile("");
+    </script>
+
+    <!-- client  section end-->
+
+    <!-- news and blogs start -->
+   
+    <div class="container news-blogs-container">
+        <div class="News-and-Blogs-layout12">
+            <div class="News-and-Blogs-heading">
+                <h1>News and <span>Blogs <img src="./iotimages/Rectangle 81.png" /></span></h1>
+            </div>
+
+            <div class="row News-and-Blogs-firstrow">
+                <div class="col-lg News-and-Blogs-cardrow1  ">
+                    <div class="row  News-and-Blogs-webview ">
+                        <div class="col-4">
+                            <img src="./iotimages/image1.png" class="img-fluid Responsive-Image" alt="Responsive Image">
+                        </div>
+                        <div class="col-8">
+                            <div class="News-and-Blogs-technologycol">
+                                <h1>The Future of AR/VR Technology</h1>
+                                <img src="./iotimages/newsp1.png" class="img-fluid" alt="hh">
+                                <p style="display: inline-block; margin-left: 5px;">Kingston Prince </p>
+                                <p class="News-and-Blogs-centerline" style="display: inline-block;">|</p>
+                                <p class="News-and-Blogs-dob"
+                                    style="display: inline-block; font-size: 12px; margin-left: 5px;">Jan 19,2023</p>
+                                <button style="display: block;">Learn More <span><i
+                                            class="bi bi-arrow-right"></i></span></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row News-and-Blogs-mobileview">
+                        <div class="col-6 ">
+                            <img src="./iotimages/image1.png" class="img-fluid Responsive-Image "
+                                alt="Responsive Image">
+                        </div>
+                        <div class="col-6">
+                            <div class="News-and-Blogs-technologycol">
+                                <h1>The Future of AR/VR Technology</h1>
+
+                                <div class="row">
+                                    <div class="col-12">
+                                        <img src="./iotimages/newsp1.png" style="margin-top: -18px;" class="img-fluid"
+                                            alt="hh">
+                                        <p style="display: inline-block; margin-left: 5px;">Kingston Prince <br />Jan
+                                            19,2023 </p>
+
+                                    </div>
+                                </div>
+                                <div>
+
+                                </div>
+
+                                <button style="display: block;">Learn More <span><i
+                                            class="bi bi-arrow-right"></i></span></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg News-and-Blogs-cardrow2 ">
+                    <div class="row  News-and-Blogs-webview">
+                        <div class="col-4">
+                            <img src="./iotimages/image2.png" class="img-fluid Responsive-Image" alt="Responsive Image">
+                        </div>
+                        <div class="col-8">
+                            <div class="News-and-Blogs-technologycol">
+                                <h1>Internet of Things Mobile Application</h1>
+                                <img src="./iotimages/newsp1.png" class="img-fluid" alt="hh">
+                                <p style="display: inline-block; margin-left: 5px;">Kingston Prince </p>
+                                <p style="display: inline-block;">|</p>
+                                <p style="display: inline-block; font-size: 12px; margin-left: 5px;">Jan 19,2023</p>
+                                <button style="display: block;">Learn More <span><i
+                                            class="bi bi-arrow-right"></i></span></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row News-and-Blogs-mobileview">
+                        <div class="col-6 ">
+                            <img src="./iotimages/image2.png" class="img-fluid Responsive-Image "
+                                alt="Responsive Image">
+                        </div>
+                        <div class="col-6">
+                            <div class="News-and-Blogs-technologycol">
+                                <h1>Internet of Things Mobile Application</h1>
+                                
+                                <div class="row">
+                                    <div class="col-12">
+                                        <img src="./iotimages/newsp1.png" style="margin-top: -18px;" class="img-fluid"
+                                            alt="hh">
+                                        <p style="display: inline-block; margin-left: 5px;">Kingston Prince <br />Jan
+                                            19,2023 </p>
+
+                                    </div>
+                                </div>
+                                <div>
+
+                                </div>
+
+                                <button style="display: block;">Learn More <span><i
+                                            class="bi bi-arrow-right"></i></span></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row   News-and-Blogs-secondrow">
+                <div class="col-lg News-and-Blogs-cardrow3">
+                    <div class="row  News-and-Blogs-webview">
+                        <div class="col-4">
+                            <img src="./iotimages/image3.png" class="img-fluid Responsive-Image" alt="Responsive Image">
+                        </div>
+                        <div class="col-8">
+                            <div class="News-and-Blogs-technologycol">
+                                <h1>Online Healthcare <br /> Shopping</h1>
+                                <img src="./iotimages/newsp1.png" class="img-fluid" alt="hh">
+                                <p style="display: inline-block; margin-left: 5px;">Kingston Prince </p>
+                                <p style="display: inline-block;">|</p>
+                                <p style="display: inline-block; font-size: 12px; margin-left: 5px;">Jan 19,2023</p>
+                                <button style="display: block;">Learn More <span><i
+                                            class="bi bi-arrow-right"></i></span></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row News-and-Blogs-mobileview">
+                        <div class="col-6 ">
+                            <img src="./iotimages/image3.png" class="img-fluid Responsive-Image "
+                                alt="Responsive Image">
+                        </div>
+                        <div class="col-6">
+                            <div class="News-and-Blogs-technologycol">
+                                <h1>Online Healthcare Shopping</h1>
+                              
+                                <div class="row">
+                                    <div class="col-12">
+                                        <img src="./iotimages/newsp1.png" style="margin-top: -18px;" class="img-fluid"
+                                            alt="hh">
+                                        <p style="display: inline-block; margin-left: 5px;">Kingston Prince <br />Jan
+                                            19,2023 </p>
+
+                                    </div>
+                                </div>
+                                <div>
+
+                                </div>
+
+                                <button style="display: block;">Learn More <span><i
+                                            class="bi bi-arrow-right"></i></span></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg News-and-Blogs-cardrow4">
+                    <div class="row  News-and-Blogs-webview">
+                        <div class="col-4">
+                            <img src="./iotimages/image4.png" class="img-fluid Responsive-Image" alt="Responsive Image">
+                        </div>
+                        <div class="col-8">
+                            <div class="News-and-Blogs-technologycol">
+                                <h1>ChatBot Integration for Live Projects</h1>
+                                <img src="./iotimages/newsp1.png" class="img-fluid" alt="hh">
+                                <p style="display: inline-block; margin-left: 5px;">Kingston Prince </p>
+                                <p style="display: inline-block;">|</p>
+                                <p style="display: inline-block; font-size: 12px; margin-left: 5px;">Jan 19,2023</p>
+                                <button style="display: block;">Learn More <span><i
+                                            class="bi bi-arrow-right"></i></span></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row News-and-Blogs-mobileview">
+                        <div class="col-6 ">
+                            <img src="./iotimages/image4.png" class="img-fluid Responsive-Image "
+                                alt="Responsive Image">
+                        </div>
+                        <div class="col-6">
+                            <div class="News-and-Blogs-technologycol">
+                                <h1>ChatBot Integration for Live Projects</h1>
+                              
+                                <div class="row">
+                                    <div class="col-12">
+                                        <img src="./iotimages/newsp1.png" style="margin-top: -18px;" class="img-fluid"
+                                            alt="hh">
+                                        <p style="display: inline-block; margin-left: 5px;">Kingston Prince <br />Jan
+                                            19,2023 </p>
+
+                                    </div>
+                                </div>
+                                <div>
+
+                                </div>
+
+                                <button style="display: block;">Learn More <span><i
+                                            class="bi bi-arrow-right"></i></span></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div> 
+
+    <!-- news and blogs end -->
+
+    <!-- faq start -->
+
+    <div class="container faq-main-div">
+        <div class="section13layout">
+            <div class="section13header">
+
+                <h1 class="section13heading">Frequently Asked <span>Questions <img
+                            src="./webdev image/Rectangle 81.png" /></span></h1>
+
+            </div>
+            <div class="container">
+                <div class="accordion">
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <span>Can’t find any answer for your question?</span>
+                            <button class="accordion-toggle"><i class="arrow down"></i></button>
+                        </div>
+                        <div class="accordion-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil
+                            unde dolorum alias iure vitae delectus odit eligendi voluptatum non soluta quod distinctio
+                            ducimus, repellendus ipsam eaque a impedit quibusdam, consequuntur laboriosam aperiam
+                            aliquid. Quaerat assumenda pariatur, voluptatibus minima inventore, in tenetur aliquid
+                            voluptatum earum consequatur nam? Numquam inventore praesentium mollitia.</div>
+                    </div>
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <span>Can’t find any answer for your question?</span>
+                            <button class="accordion-toggle"><i class="arrow down"></i></button>
+                        </div>
+                        <div class="accordion-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil
+                            unde dolorum alias iure vitae delectus odit eligendi voluptatum non soluta quod distinctio
+                            ducimus, repellendus ipsam eaque a impedit quibusdam, consequuntur laboriosam aperiam
+                            aliquid. Quaerat assumenda pariatur, voluptatibus minima inventore, in tenetur aliquid
+                            voluptatum earum consequatur nam? Numquam inventore praesentium mollitia.</div>
+                    </div>
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <span>Can’t find any answer for your question?</span>
+                            <button class="accordion-toggle"><i class="arrow down"></i></button>
+                        </div>
+                        <div class="accordion-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil
+                            unde dolorum alias iure vitae delectus odit eligendi voluptatum non soluta quod distinctio
+                            ducimus, repellendus ipsam eaque a impedit quibusdam, consequuntur laboriosam aperiam
+                            aliquid. Quaerat assumenda pariatur, voluptatibus minima inventore, in tenetur aliquid
+                            voluptatum earum consequatur nam? Numquam inventore praesentium mollitia.</div>
+                    </div>
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <span>Can’t find any answer for your question?</span>
+                            <button class="accordion-toggle"><i class="arrow down"></i></button>
+                        </div>
+                        <div class="accordion-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil
+                            unde dolorum alias iure vitae delectus odit eligendi voluptatum non soluta quod distinctio
+                            ducimus, repellendus ipsam eaque a impedit quibusdam, consequuntur laboriosam aperiam
+                            aliquid. Quaerat assumenda pariatur, voluptatibus minima inventore, in tenetur aliquid
+                            voluptatum earum consequatur nam? Numquam inventore praesentium mollitia.</div>
+                    </div>
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <span>Can’t find any answer for your question?</span>
+                            <button class="accordion-toggle"><i class="arrow down"></i></button>
+                        </div>
+                        <div class="accordion-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil
+                            unde dolorum alias iure vitae delectus odit eligendi voluptatum non soluta quod distinctio
+                            ducimus, repellendus ipsam eaque a impedit quibusdam, consequuntur laboriosam aperiam
+                            aliquid. Quaerat assumenda pariatur, voluptatibus minima inventore, in tenetur aliquid
+                            voluptatum earum consequatur nam? Numquam inventore praesentium mollitia.</div>
+                    </div>
+                    <div class="accordion-item">
+                        <div class="accordion-header">
+                            <span>Can’t find any answer for your question?</span>
+                            <button class="accordion-toggle"><i class="arrow down"></i></button>
+                        </div>
+                        <div class="accordion-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil
+                            unde dolorum alias iure vitae delectus odit eligendi voluptatum non soluta quod distinctio
+                            ducimus, repellendus ipsam eaque a impedit quibusdam, consequuntur laboriosam aperiam
+                            aliquid. Quaerat assumenda pariatur, voluptatibus minima inventore, in tenetur aliquid
+                            voluptatum earum consequatur nam? Numquam inventore praesentium mollitia.</div>
+                    </div>
+                    <div class="accordion-item accordion-bottom">
+                        <div class="accordion-header">
+                            <span>Can’t find any answer for your question?</span>
+                            <button class="accordion-toggle"><i class="arrow down"></i></button>
+                        </div>
+                        <div class="accordion-content">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil
+                            unde dolorum alias iure vitae delectus odit eligendi voluptatum non soluta quod distinctio
+                            ducimus, repellendus ipsam eaque a impedit quibusdam, consequuntur laboriosam aperiam
+                            aliquid. Quaerat assumenda pariatur, voluptatibus minima inventore, in tenetur aliquid
+                            voluptatum earum consequatur nam? Numquam inventore praesentium mollitia.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const accordionHeaders = document.querySelectorAll('.accordion-header');
+
+            accordionHeaders.forEach(header => {
+                header.addEventListener('click', function () {
+                    const accordionItem = this.parentElement;
+                    const accordionContent = accordionItem.querySelector('.accordion-content');
+                    const accordionToggle = accordionItem.querySelector('.accordion-toggle').querySelector('.arrow');
+
+                    if (accordionContent.style.display === 'block') {
+                        accordionContent.style.display = 'none';
+                        accordionToggle.classList.remove('up');
+                        accordionToggle.classList.add('down');
+                    } else {
+                        accordionContent.style.display = 'block';
+                        accordionToggle.classList.remove('down');
+                        accordionToggle.classList.add('up');
+                    }
+                });
+            });
+        });
+
+        // script.js
+        document.addEventListener('DOMContentLoaded', function () {
+            const accordionItems = document.querySelectorAll('.accordion-header');
+
+            accordionItems.forEach(item => {
+                item.addEventListener('click', function () {
+                    // Toggle active class on the clicked accordion item
+                    this.classList.toggle('active');
+
+                    // Toggle arrow color
+                    const accordionToggle = this.querySelector('.accordion-toggle').querySelector('.arrow');
+                    accordionToggle.classList.toggle('white');
+
+                    // Toggle text color
+                    const accordionHeader = this.querySelector('.accordion-header');
+                    accordionHeader.classList.toggle('white');
+                });
+            });
+        });
+
+
+
+    </script>
+
+    <!-- FAQ   section end-->
+
+    <!-- form start -->
+
+  
+    <div class="form-background">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 ">
+                    <div class="form-head">Get in <span class="form-touch">Touch</span></div>
+                    <h5 class="form-top">Want to start a project with us?</h5>
+                    <p class="form-paragraph">Lorem ipsum dolor sit amet. Non commodi aliquam qui voluptatem dignissimos
+                        sed modi nihil aut Quis porro id suscipit quam qui excepturi dolor ut quasi voluptatem! Sed mol
+                        stias animi ad quos modi qui libero laborum ab omnis magnam.</p>
+
+                    <div class="row">
+                        <div class="col-md-1">
+                            <div class="call-icon"><i class="bi bi-telephone"></i></div>
+                            <div class="green-line"></div>
+                            <div class="vertical-line"></div>
+                        </div>
+                        <div class="col-md-11">
+                            <div class="step-content">
+                                <h5>STEP 1</h5>
+                                <h6>Join a discovery call</h6>
+                                <p>Lorem ipsum dolor sit amet. Non commodi aliquam qui voluptatem dignissimos sed modi
+                                    nihil aut Quis porro id suscipit </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-1">
+                            <div class="call-icon"><i class="bi bi-person"></i></div>
+                            <div class="green-line"></div>
+                            <div class="vertical-line2"></div>
+                        </div>
+                        <div class="col-md-11">
+                            <div class="step-content">
+                                <h5>STEP 2</h5>
+                                <h6>Get top 1% application on your team</h6>
+                                <p>Lorem ipsum dolor sit amet. Non commodi aliquam qui voluptatem dignissimos sed modi
+                                    nihil aut Quis porro id suscipit </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-1">
+                            <div class="call-icon"><i class="bi bi-check2"></i></div>
+                        </div>
+                        <div class="col-md-11">
+                            <div class="step-content">
+                                <h5>STEP 3</h5>
+                                <h6>Get started and track performance.</h6>
+                                <p>Lorem ipsum dolor sit amet. Non commodi aliquam qui voluptatem dignissimos sed modi
+                                    nihil aut Quis porro id suscipit </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 form-content2">
+                    <img src="./iotimages/session11circle.png" class="circleimage">
+                    <div class="form-container">
+                        <h3 class="form-text">Send Your <span class="form-touch">Idea's</span></h3>
+                        <div class="form-line"></div>
+                        <form>
+                            <div class="row">
+                                <div class="form-group col-md-6">
+                                    <label for="firstname">First Name<span class="form-star">*</span></label>
+                                    <input id="firstname" type="text" class="form-control" name="first name">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="lastname">Last Name<span class="form-star">*</span></label>
+                                    <input id="lastname" type="text" class="form-control" name="last name">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email<span class="form-star">*</span></label>
+                                <input id="email" type="email" class="form-control" name="email">
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" class="form-control" name="message"
+                                    style="height: 100px;"></textarea>
+                            </div>
+                            <button type="submit" class="form-button">Start Your Project</button>
+                        </form>
+                    </div>
+                    <img src="./iotimages/session11arrow.png" class="arrowimage">
+                </div>
+            </div>
+        </div>
+    </div> 
+
+
+    <!-- form end -->
+
+
+
+    <!-- Footer -->
+
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row footer-columns justify-content-between">
+                <div id="footer-column" class="col-md-2 footer-column footer-about">
+                    <h3 id="footer-head" class="mb-3 d-flex justify-content-between align-items-center">
+                        About<i class="bi bi-chevron-down footer-arrow-icon"></i>
+                    </h3>
+                    <ul id="footer-menu" class="footer-menu">
+                        <li>Who We Are</li>
+                        <li>Career</li>
+                        <li>How We Work</li>
+                        <li>Blogs</li>
+                        <li>Get in Touch</li>
+                    </ul>
+                    <hr class="footer-line">
+                </div>
+                <div id="footer-column" class="col-md-2 footer-column footer-services">
+                    <h3 id="footer-head" class="mb-3 d-flex justify-content-between align-items-center">
+                        Services<i class="bi bi-chevron-down footer-arrow-icon"></i>
+                    </h3>
+                    <ul id="footer-menu" class="footer-menu">
+                        <li>Web App Development</li>
+                        <li>Mobile App Development</li>
+                        <li>Software Development</li>
+                        <li>Support & Maintenance</li>
+                        <li>QA Testing</li>
+                        <li>DevOps</li>
+                        <li>Blog</li>
+                        <li>Cloud Services</li>
+                    </ul>
+                    <hr class="footer-line">
+                </div>
+                <div id="footer-column" class="col-md-2 footer-column footer-technologies">
+                    <h3 id="footer-head" class="mb-3 d-flex justify-content-between align-items-center">
+                        Technologies<i class="bi bi-chevron-down footer-arrow-icon"></i>
+                    </h3>
+                    <ul id="footer-menu" class="footer-menu">
+                        <li>Blockchain</li>
+                        <li>Artificial Intelligence</li>
+                        <li>AR & VR</li>
+                        <li>Cloud Computing</li>
+                        <li>Internet of Things</li>
+                        <li>more...</li>
+                    </ul>
+                    <hr class="footer-line">
+                </div>
+                <div id="footer-column" class="col-md-2 footer-column footer-industries">
+                    <h3 id="footer-head" class="mb-3 d-flex justify-content-between align-items-center">
+                        Industries<i class="bi bi-chevron-down footer-arrow-icon"></i>
+                    </h3>
+                    <ul id="footer-menu" class="footer-menu">
+                        <li>FinTech</li>
+                        <li>Banking</li>
+                        <li>Retail</li>
+                        <li>Manufacturing</li>
+                        <li>Insurance</li>
+                        <li>Real Estate</li>
+                        <li>Travel & Tourism</li>
+                        <li>Education</li>
+                    </ul>
+                    <hr class="footer-line">
+                </div>
+                <div id="footer-column" class="col-md-2 footer-column footer-portfolios">
+                    <h3 id="footer-head" class="mb-3 d-flex justify-content-between align-items-center">
+                        Portfolios<i class="bi bi-chevron-down footer-arrow-icon"></i>
+                    </h3>
+                    <ul id="footer-menu" class="footer-menu">
+                        <li>Kid's World</li>
+                        <li>Resto</li>
+                    </ul>
+                    <hr class="footer-line">
+                </div>
+            </div>
+        </div>
+        <hr class="footer-border">
+        <div class="container">
+            <div class="row justify-content-between footer-bottom-content">
+                <div class="col-md-auto">
+                    <p class="mb-0 footer-text1">Privacy Policy | Terms & Conditions | Sitemap</p>
+                </div>
+             
+                <div class="col-md-auto ">
+                    <p class="footer-text2"><span class="copysymbol"><img src="./iotimages/copyRight.png"> </span>
+                        <span class="copysymbol_text">2024 All
+                            Rights
+                            Reserved - justlogix.com</span>
+                    </p>
+                </div>
+                <div class="col-md-auto d-flex justify-content-center">
+                    <div class="footer-text3">
+                        <a href="#" class="btn btn-link icon"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="btn btn-link icon"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="btn btn-link icon"><i class="bi bi-twitter"></i></a>
+                        <a href="#" class="btn btn-link icon"><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </footer> 
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Get all footer columns
+            var footerColumns = document.querySelectorAll('#footer-column');
+
+            // Loop through each footer column
+            footerColumns.forEach(function (column) {
+                // Find the h3 element
+                var h3 = column.querySelector('#footer-head');
+
+                // Find the ul element
+                var menu = column.querySelector('#footer-menu');
+
+                // Add click event listener to the icon
+                h3.addEventListener('click', function () {
+                    // Toggle the active class on the menu when the icon is clicked
+                    menu.classList.toggle('active');
+
+                    // Toggle the icon between chevron-down and chevron-up
+                    h3.querySelector('i').classList.toggle('bi-chevron-down');
+                    h3.querySelector('i').classList.toggle('bi-chevron-up');
+                });
+            });
+        });
+
+    </script>
+
+
+
+
+
+    <!-- Bootstrap JS and dependencies -->
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-d5DGKw2TCkPNNhUXn8mS9jZ6uImNkPa0WJZi6oFbC1COBckqWnVHpvhYxfx4uhVi"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shCj3lY5Z0bjqsVSwgMQUdA6ez5gRVNBs/DJ+"
+        crossorigin="anonymous"></script>
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jqu||ery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+    
+</body>
+</body>
+
+</html>
