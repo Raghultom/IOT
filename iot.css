@@ -646,6 +646,7 @@ color: #414042 !important;
     .previous-work-mobile-container {
         display: block !important;
         margin-top: 100px !important;
+
     }
 
     .previouswork-container {
@@ -654,10 +655,13 @@ color: #414042 !important;
 
     .previous-work-mobile-content-section {
         display: none !important;
+
     }
 
     .previous-work-mobile-active {
         display: block !important;
+
+
     }
 
     .previous-work-mobile-arrows {
