@@ -387,22 +387,99 @@ height: 36px !important; */
 .iot-mobile-maincontainer {
     display: none !important;
 }
+.iot-mobile-icon {
+    margin-left: 10px;
+}
+.iot-mobile-card-header button {
+    text-decoration: none;
+}
+.collapse {
+    display: none;
+}
+.collapse.show {
+    display: block;
+}
+
+
+
+/* ----- iot mobile */
+
+
+.iot-mobile-btn{
+    text-decoration: none !important;
+    border: none !important;
+    box-shadow: none !important ;
+    color: #000000 !important;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100% !important;
+    text-align: left;
+    font-size: 16px !important;
+    font-weight: 600;
+line-height: 25.14px;
+text-align: left;
+
+}
+.iot-mobile-btn.show {
+    background: linear-gradient(90.97deg, #2CA068 6.46%, #23899C 100%);
+    color: white !important;
+    border: none !important;
+    text-decoration: none !important;
+box-shadow: none !important ;
+font-size: 18px !important;
+font-weight: 600;
+line-height: 25.14px;
+text-align: left;
+border-top-left-radius: 20px !important;
+border-bottom-right-radius: 20px !important;
+/* height: 44px !important; */
+width: 100% !important;
+}
+.iot-mobile-card-header1 button {
+    text-decoration: none;
+}
+.collapse {
+    display: none;
+}
+.collapse.show {
+    display: block !important;
+}
+.iot-development-container-mobile{
+    display: none !important;
+}
+
 @media screen and (max-width: 767px) {
-    .iot-mobile-maincontainer {
+    .iot-mobile-icon i{
+        margin-left: auto !important;
+    }
+    .iot-mobile-card-header1 h3 .btn {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+    .iot-development-container-mobile {
         margin-top: 100px !important;
         display: block !important;
     }
-.iot-development-container{
-    display: none !important;
-}
-    .iot-mobile-maincontainer h2 {
+    .iot-development-container {
+        display: none !important;
+    }
+    .iot-development-container-mobile h2 {
         font-size: 32px;
         font-weight: 600;
         line-height: 40.22px;
         text-align: left;
-
     }
+.iot-mobile-card-header1 button{
+font-size: 16px;
+font-weight: 600;
+line-height: 20.11px;
+text-align: left;
+color: #414042 !important;
 
+}
     .iot-mobile-span {
         color: #2CA068 !important;
         position: relative;
@@ -416,69 +493,16 @@ height: 36px !important; */
         height: 3px;
         border-radius: 12px;
         background-color: #2CA068;
-    
     }
 
-    .iot-mobile-icon {
-        font-weight: bold !important;
-        float: right !important;
-    }
-
-    .iot-mobile-card-header button {
-        width: 100%;
-        text-align: left;
-    }
-
-    .iot-mobile-card-header button:focus {
-        outline: none;
-    }
-
-    .iot-mobile-btn[aria-expanded="true"],
-    .iot-mobile-btn.active {
-        background: linear-gradient(90.97deg, #2CA068 6.46%, #23899C 100%);
-        color: white !important;
-        border-top-left-radius: 20px !important;
-        border-bottom-right-radius: 20px !important;
-        text-decoration: none !important;
-        border: none !important;
-        box-shadow: none !important;
-        font-size: 20px;
-        font-weight: 600;
-        line-height: 25.14px;
-        text-align: left;
-
-
-    }
-
-    .iot-mobile-btn[aria-expanded="false"] {
-        background: transparent;
-        text-decoration: none !important;
-        border: none !important;
-        box-shadow: none !important;
-        color: black !important;
-        font-size: 20px;
-        font-weight: 600;
-        line-height: 25.14px;
-        text-align: left;
-
-    }
-
-    /* CSS for replacing list item bullets with an image */
     .custom-list {
         list-style: none !important;
         padding-left: 0 !important;
     }
-
     .custom-list li {
         background: url('./iotimages/tick.png') no-repeat left center;
-
-        /* padding: 10px !important; */
-
-
         margin-bottom: 20px !important;
-
     }
-
     .iot-mobile-card-body p {
         font-size: 12px !important;
         font-weight: 400 !important;
@@ -487,22 +511,16 @@ height: 36px !important; */
         color: #676968 !important;
         margin-top: 20px !important;
     }
-
     .custom-list {
         margin-top: 20px !important;
     }
-
     .custom-list li span {
-
-
         font-size: 14px !important;
         font-weight: 400 !important;
         line-height: 17.6px !important;
         text-align: left !important;
         padding-left: 30px !important;
-
     }
-
     .iot-mobile-background {
         background-image: url(./iotimages/rectangle\ mobile.png);
         background-size: cover;
@@ -512,11 +530,9 @@ height: 36px !important; */
         border-bottom-right-radius: 50px !important;
         margin-top: 30px !important;
     }
-
     .iot-mobile-card {
         padding: 20px !important;
     }
-
     .iot-mobile-button {
         font-size: 16px;
         font-weight: 700;
@@ -525,9 +541,12 @@ height: 36px !important; */
         background: linear-gradient(90deg, #248B97 0%, #2CA068 100%);
         border-radius: 8px !important;
         color: white !important;
-
+        box-shadow: none !important;
     }
+    
 }
+
+
 
 /* iot development end */
 
@@ -1356,39 +1375,27 @@ height: 36px !important; */
     }
 
     .webapp_section_8_layout .webapp_section_8_webdev {
-        font-size: 32px;
-        font-weight: 600;
-        line-height: 40px;
-    }
-.webapp_section_8_webdev{
-
-}
-    .webapp_section_8_layout .webapp_section_8_webdevbenefits {
-        font-size: 30px;
-        font-weight: 600;
-    }
-
-    .webapp_section_8_webdev {
-        font-size: 48px;
-        font-weight: 700;
-        line-height: 60.34px;
+        font-size: 31px !important;
+        font-weight: 600 !important;
+        line-height: 40px !important;
         text-align: left;
-        color: #000000;
-        position: relative;
+
     }
+
+    .webapp_section_8_layout .webapp_section_8_webdevbenefits {
+        font-size: 31px !important;
+        font-weight: 600 !important;
+        line-height: 40px !important;
+        text-align: left;
+    }
+
+   
 
     .webapp_section_8_webdevbenefits::after {
         width: 0px;
     }
 
-    .webapp_section_8_webdevbenefits {
-        font-size: 48px;
-        font-weight: 700;
-        line-height: 60.34px;
-        text-align: left;
-        color: rgba(255, 255, 255, 1);
-    }
-
+ 
     .webapp_section_8_rectangle_line {
         display: inline;
         width: 28px;
