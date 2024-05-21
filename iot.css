@@ -1774,7 +1774,7 @@ line-height: 22px;
     background-color: currentColor; /* Use the same color as the text */
 }
 
-@media (max-width: 425px) {
+@media (max-width: 425px)  {
 
     .iot-header {
         font-size: 32px;
@@ -1915,7 +1915,7 @@ line-height: 22px;
 }
 }
 
-@media (max-width: 375px) {
+@media (min-width: 375px) and (max-width:424px) {
     .iot-header {
         font-size: 28px;
         font-weight: 600;
@@ -1945,7 +1945,7 @@ line-height: 22px;
         /* Auto height to fit content */
         overflow-y: auto;
         /* Enable vertical scrolling */
-        overflow-x: hidden;
+        overflow-x: hidden !important;
         /* Disable horizontal scrolling */
     }
 
@@ -1954,6 +1954,7 @@ line-height: 22px;
         /* Adjust to fit smaller screens */
         height: auto !important;
         margin-bottom: 20px;
+        /* padding: 40px !important; */
     }
 
     .iot-card:not(:last-child) {
@@ -2051,7 +2052,7 @@ line-height: 22px;
 }
 }
 
-@media (max-width: 320px) {
+@media (min-width: 320px) and (max-width:374px) {
     .iot-header {
         font-size: 32px !important;
         font-weight: 600;
@@ -2073,7 +2074,7 @@ line-height: 22px;
     }
 
     .main-container {
-        overflow-x: hidden;
+        overflow-x: hidden !important;
         /* Disable horizontal scrolling */
 
         display: flex;
@@ -2083,7 +2084,7 @@ line-height: 22px;
         /* Auto height to fit content */
         overflow-y: auto;
         /* Enable vertical scrolling */
-        overflow-x: hidden;
+        /* overflow-x: hidden !important; */
         /* Disable horizontal scrolling */
     }
 
