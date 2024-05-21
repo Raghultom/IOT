@@ -373,6 +373,7 @@ height: 36px !important; */
     line-height: 22.63px !important;
     text-align: left !important;
     border-radius: 8px !important;
+    box-shadow: none !important;
 
 
 }
@@ -958,6 +959,7 @@ color: #414042 !important;
     border: none;
     padding: 10px;
     width: 200px;
+    box-shadow: none !important;
 }
 
 .Engagement-Models-maindiv {
@@ -2104,6 +2106,7 @@ line-height: 22px;
         /* Adjust to fit smaller screens */
         height: auto !important;
         margin-bottom: 20px;
+      
     }
 
     .iot-card:not(:last-child) {
@@ -2485,6 +2488,7 @@ line-height: 22px;
     display: inline-block !important;
     overflow: hidden !important;
     margin-left: 5px !important;
+    box-shadow: none !important;
 }
 
 
