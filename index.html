@@ -1190,7 +1190,7 @@
             <img src="./iotimages/rightarrow_dark.png" class="previous-work-mobile-arrow" id="nextArrow">
         </div>
     </div>
-
+<!-- 
     <script>
         let currentStartIndex = 1;
         const totalContent = 6;
@@ -1232,9 +1232,52 @@
 
         // Initial display
         updateContentDisplay();
-    </script>
+    </script> -->
+
+<script>
+   document.addEventListener('DOMContentLoaded', () => {
+    let currentStartIndex = 1;
+    const totalContent = 6;
+
+    function updateContentDisplay() {
+        const scrollPosition = window.scrollY;
+
+        for (let i = 1; i <= totalContent; i++) {
+            document.getElementById(`content${i}`).classList.remove('previous-work-mobile-active');
+        }
+        document.getElementById(`content${currentStartIndex}`).classList.add('previous-work-mobile-active');
+        document.getElementById(`content${currentStartIndex + 1}`).classList.add('previous-work-mobile-active');
+
+        // Update arrow images
+        document.getElementById('prevArrow').src = currentStartIndex > 1 ? './iotimages/leftarrow_dark.png' : './iotimages/leftarrow_lite.png';
+        document.getElementById('nextArrow').src = currentStartIndex < totalContent - 1 ? './iotimages/rightarrow_dark.png' : './iotimages/rightarrow_lite.png';
+
+        // Restore scroll position
+        window.scrollTo(0, scrollPosition);
+    }
+
+    document.getElementById('prevArrow').addEventListener('click', (event) => {
+        event.preventDefault();
+        if (currentStartIndex > 1) {
+            currentStartIndex--;
+            updateContentDisplay();
+        }
+    });
+
+    document.getElementById('nextArrow').addEventListener('click', (event) => {
+        event.preventDefault();
+        if (currentStartIndex < totalContent - 1) {
+            currentStartIndex++;
+            updateContentDisplay();
+        }
+    });
+
+    // Initial display
+    updateContentDisplay();
+});
 
 
+</script>
 
     <!-- previouswork end -->
 
