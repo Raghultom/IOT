@@ -1706,7 +1706,73 @@ line-height: 22px;
     height: 2px; /* Thickness of the underline */
     background-color: currentColor; /* Use the same color as the text */
 }
+.iot-a2{
+    color: #5573DB !important;
+    position: relative;
 
+
+}
+.iot-a2::after {
+    content: '➔'; 
+    position: absolute;
+    left: 85px !important;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.iot-a2::before {
+    content: '';
+    position: absolute;
+    bottom: -2px; /* Adjust this value to position the underline */
+    left: 0;
+    width: 38%;
+    height: 2px; /* Thickness of the underline */
+    background-color: currentColor; /* Use the same color as the text */
+}
+
+.iot-a3{
+    color: #E9981E !important;
+    position: relative;
+
+
+}
+.iot-a3::after {
+    content: '➔'; 
+    position: absolute;
+    left: 85px !important;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.iot-a3::before {
+    content: '';
+    position: absolute;
+    bottom: -2px; /* Adjust this value to position the underline */
+    left: 0;
+    width: 38%;
+    height: 2px; /* Thickness of the underline */
+    background-color: currentColor; /* Use the same color as the text */
+}
+.iot-a4{
+    color: #EF68C0 !important;
+    position: relative;
+
+
+}
+.iot-a4::after {
+    content: '➔'; 
+    position: absolute;
+    left: 85px !important;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.iot-a4::before {
+    content: '';
+    position: absolute;
+    bottom: -2px; /* Adjust this value to position the underline */
+    left: 0;
+    width: 38%;
+    height: 2px; /* Thickness of the underline */
+    background-color: currentColor; /* Use the same color as the text */
+}
 
 @media (max-width: 425px) {
 
@@ -1756,6 +1822,97 @@ line-height: 22px;
     .iot-card:not(:last-child) {
         margin-bottom: 20px;
     }
+
+    
+.iot-a1{
+    color: #2CA068 !important;
+    position: relative;
+
+
+}
+.iot-a1::after {
+    content: '➔'; 
+    position: absolute;
+    left: 85px !important;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.iot-a1::before {
+    content: '';
+    position: absolute;
+    bottom: -2px; /* Adjust this value to position the underline */
+    left: 0;
+    width: 30%;
+    height: 2px; /* Thickness of the underline */
+    background-color: currentColor; /* Use the same color as the text */
+}
+.iot-a2{
+    color: #5573DB !important;
+    position: relative;
+
+
+}
+.iot-a2::after {
+    content: '➔'; 
+    position: absolute;
+    left: 85px !important;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.iot-a2::before {
+    content: '';
+    position: absolute;
+    bottom: -2px; /* Adjust this value to position the underline */
+    left: 0;
+    width: 30%;
+    height: 2px; /* Thickness of the underline */
+    background-color: currentColor; /* Use the same color as the text */
+}
+
+.iot-a3{
+    color: #E9981E !important;
+    position: relative;
+
+
+}
+.iot-a3::after {
+    content: '➔'; 
+    position: absolute;
+    left: 85px !important;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.iot-a3::before {
+    content: '';
+    position: absolute;
+    bottom: -2px; /* Adjust this value to position the underline */
+    left: 0;
+    width: 30%;
+    height: 2px; /* Thickness of the underline */
+    background-color: currentColor; /* Use the same color as the text */
+}
+.iot-a4{
+    color: #EF68C0 !important;
+    position: relative;
+
+
+}
+.iot-a4::after {
+    content: '➔'; 
+    position: absolute;
+    left: 85px !important;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.iot-a4::before {
+    content: '';
+    position: absolute;
+    bottom: -2px; /* Adjust this value to position the underline */
+    left: 0;
+    width: 30%;
+    height: 2px; /* Thickness of the underline */
+    background-color: currentColor; /* Use the same color as the text */
+}
 }
 
 @media (max-width: 375px) {
@@ -1802,6 +1959,96 @@ line-height: 22px;
     .iot-card:not(:last-child) {
         margin-bottom: 20px;
     }
+       
+.iot-a1{
+    color: #2CA068 !important;
+    position: relative;
+
+
+}
+.iot-a1::after {
+    content: '➔'; 
+    position: absolute;
+    left: 85px !important;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.iot-a1::before {
+    content: '';
+    position: absolute;
+    bottom: -2px; /* Adjust this value to position the underline */
+    left: 0;
+    width: 43%;
+    height: 2px; /* Thickness of the underline */
+    background-color: currentColor; /* Use the same color as the text */
+}
+.iot-a2{
+    color: #5573DB !important;
+    position: relative;
+
+
+}
+.iot-a2::after {
+    content: '➔'; 
+    position: absolute;
+    left: 85px !important;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.iot-a2::before {
+    content: '';
+    position: absolute;
+    bottom: -2px; /* Adjust this value to position the underline */
+    left: 0;
+    width: 43%;
+    height: 2px; /* Thickness of the underline */
+    background-color: currentColor; /* Use the same color as the text */
+}
+
+.iot-a3{
+    color: #E9981E !important;
+    position: relative;
+
+
+}
+.iot-a3::after {
+    content: '➔'; 
+    position: absolute;
+    left: 85px !important;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.iot-a3::before {
+    content: '';
+    position: absolute;
+    bottom: -2px; /* Adjust this value to position the underline */
+    left: 0;
+    width: 43%;
+    height: 2px; /* Thickness of the underline */
+    background-color: currentColor; /* Use the same color as the text */
+}
+.iot-a4{
+    color: #EF68C0 !important;
+    position: relative;
+
+
+}
+.iot-a4::after {
+    content: '➔'; 
+    position: absolute;
+    left: 85px !important;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.iot-a4::before {
+    content: '';
+    position: absolute;
+    bottom: -2px; /* Adjust this value to position the underline */
+    left: 0;
+    width: 43%;
+    height: 2px; /* Thickness of the underline */
+    background-color: currentColor; /* Use the same color as the text */
+}
 }
 
 @media (max-width: 320px) {
@@ -1850,6 +2097,96 @@ line-height: 22px;
     .iot-card:not(:last-child) {
         margin-bottom: 20px;
     }
+       
+.iot-a1{
+    color: #2CA068 !important;
+    position: relative;
+
+
+}
+.iot-a1::after {
+    content: '➔'; 
+    position: absolute;
+    left: 85px !important;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.iot-a1::before {
+    content: '';
+    position: absolute;
+    bottom: -2px; /* Adjust this value to position the underline */
+    left: 0;
+    width: 55%;
+    height: 2px; /* Thickness of the underline */
+    background-color: currentColor; /* Use the same color as the text */
+}
+.iot-a2{
+    color: #5573DB !important;
+    position: relative;
+
+
+}
+.iot-a2::after {
+    content: '➔'; 
+    position: absolute;
+    left: 85px !important;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.iot-a2::before {
+    content: '';
+    position: absolute;
+    bottom: -2px; /* Adjust this value to position the underline */
+    left: 0;
+    width: 55%;
+    height: 2px; /* Thickness of the underline */
+    background-color: currentColor; /* Use the same color as the text */
+}
+
+.iot-a3{
+    color: #E9981E !important;
+    position: relative;
+
+
+}
+.iot-a3::after {
+    content: '➔'; 
+    position: absolute;
+    left: 85px !important;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.iot-a3::before {
+    content: '';
+    position: absolute;
+    bottom: -2px; /* Adjust this value to position the underline */
+    left: 0;
+    width: 55%;
+    height: 2px; /* Thickness of the underline */
+    background-color: currentColor; /* Use the same color as the text */
+}
+.iot-a4{
+    color: #EF68C0 !important;
+    position: relative;
+
+
+}
+.iot-a4::after {
+    content: '➔'; 
+    position: absolute;
+    left: 85px !important;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.iot-a4::before {
+    content: '';
+    position: absolute;
+    bottom: -2px; /* Adjust this value to position the underline */
+    left: 0;
+    width: 55%;
+    height: 2px; /* Thickness of the underline */
+    background-color: currentColor; /* Use the same color as the text */
+}
 }
 
 
