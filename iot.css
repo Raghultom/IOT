@@ -1649,15 +1649,23 @@ color: #676968;
     margin-top: 100px !important;
 }
 
-.main-container {
+/* .main-container {
     display: flex;
     overflow-x: scroll !important;
-    /* Disable horizontal scrolling */
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding: 20px;
+    box-sizing: border-box;
+} */
+.main-container {
+    display: flex;
+    overflow-x: auto; /* Use 'auto' instead of 'scroll' */
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
     padding: 20px;
     box-sizing: border-box;
 }
+
 
 .iot-header {
     font-size: 48px;
