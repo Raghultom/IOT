@@ -724,13 +724,15 @@ height: 36px !important; */
         /* flex-direction: column !important; */
         align-items: center !important;
         justify-content: center !important;
-        gap: 50px !important;
+        gap: 20px !important;
         margin-top: 20px !important;
     }
 
     .previous-work-mobile-arrow {
         cursor: pointer !important;
         font-size: 24px !important;
+        width: 64px;
+
     }
 
     .previous-work-mobile-container h1 {
