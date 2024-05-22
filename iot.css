@@ -1665,6 +1665,7 @@ color: #676968;
     padding: 20px;
     box-sizing: border-box;
     cursor: grab;
+    scroll-behavior: smooth !important; /* Enables smooth scrolling */
 }
 
 .main-container.active {
