@@ -1686,6 +1686,15 @@
             </div>
         </div>
     </div> 
+    <script>
+        document.querySelector('.main-container').addEventListener('wheel', function(event) {
+    if (event.deltaY !== 0) {
+        event.preventDefault();
+        this.scrollLeft += event.deltaY;
+    }
+});
+
+    </script>
     <!-- iot end -->
 
     <!-- our case start -->
