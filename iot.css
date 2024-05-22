@@ -157,7 +157,10 @@ body {
     text-align: left;
 
 }
-
+.retail-img{
+    position: absolute;
+    margin-left: 85px;
+}
 @media (max-width:768px) {
     .retail-header {
         width: auto !important;
@@ -224,6 +227,8 @@ height: 36px !important; */
     }
 
     .retail-img {
+        position: relative !important;
+        margin-left: 0px;
         /* width: 204px !important;
     height: 36px !important;
     border-radius: 8px !important;
@@ -362,6 +367,8 @@ height: 36px !important; */
     line-height: 22px;
     text-align: left;
     color: #676968;
+    margin-top: 40px !important;
+    margin-bottom: 40px !important;
 }
 
 .text-pane-btn {
@@ -384,19 +391,25 @@ height: 36px !important; */
     line-height: 17.6px !important;
     text-align: left !important;
     color: #000000 !important;
+    margin-bottom: 20px !important;
 }
+
 .iot-mobile-maincontainer {
     display: none !important;
 }
+
 .iot-mobile-icon {
     margin-left: 10px;
 }
+
 .iot-mobile-card-header button {
     text-decoration: none;
 }
+
 .collapse {
     display: none;
 }
+
 .collapse.show {
     display: block;
 }
@@ -406,10 +419,10 @@ height: 36px !important; */
 /* ----- iot mobile */
 
 
-.iot-mobile-btn{
+.iot-mobile-btn {
     text-decoration: none !important;
     border: none !important;
-    box-shadow: none !important ;
+    box-shadow: none !important;
     color: #000000 !important;
     display: flex;
     justify-content: space-between;
@@ -418,73 +431,105 @@ height: 36px !important; */
     text-align: left;
     font-size: 16px !important;
     font-weight: 600;
-line-height: 25.14px;
-text-align: left;
+    line-height: 25.14px;
+    text-align: left;
 
 }
+
 .iot-mobile-btn.show {
     background: linear-gradient(90.97deg, #2CA068 6.46%, #23899C 100%);
     color: white !important;
     border: none !important;
     text-decoration: none !important;
-box-shadow: none !important ;
-font-size: 18px !important;
-font-weight: 600;
-line-height: 25.14px;
-text-align: left;
-border-top-left-radius: 20px !important;
-border-bottom-right-radius: 20px !important;
-/* height: 44px !important; */
-width: 100% !important;
+    box-shadow: none !important;
+    font-size: 18px !important;
+    font-weight: 600;
+    line-height: 25.14px;
+    text-align: left;
+    border-top-left-radius: 20px !important;
+    border-bottom-right-radius: 20px !important;
+    height: 44px !important;
+    width: 100% !important;
 }
+
 .iot-mobile-card-header1 button {
     text-decoration: none;
 }
+
 .collapse {
     display: none;
 }
+
 .collapse.show {
     display: block !important;
 }
-.iot-development-container-mobile{
+
+.iot-development-container-mobile {
     display: none !important;
 }
+@media screen and (max-width: 320px) {
+    .iot-mobile-button {
+        font-size: 16px !important;
+        font-weight: 200 !important;
+        line-height: 20.11px !important;
+        text-align: left;
+        background: linear-gradient(90deg, #248B97 0%, #2CA068 100%);
+        border-radius: 8px !important;
+        color: white !important;
+        box-shadow: none !important;
+        height: 32px !important;
+    }
 
+}
 @media screen and (max-width: 767px) {
-    .iot-mobile-icon i{
+    .iot-mobile-icon i {
         margin-left: auto !important;
     }
+    .iot-mobile-icon{
+        font-size: 11px !important;
+    }
+
     .iot-mobile-card-header1 h3 .btn {
         display: flex;
-        justify-content: space-between;
+        justify-content:space-between;
         align-items: center;
         width: 100%;
+        padding: 0px !important;
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+        padding-top: 5px !important;
     }
+
     .iot-development-container-mobile {
         margin-top: 100px !important;
         display: block !important;
     }
+
     .iot-development-container {
         display: none !important;
     }
+
     .iot-development-container-mobile h2 {
         font-size: 32px;
         font-weight: 600;
         line-height: 40.22px;
         text-align: left;
     }
-.iot-mobile-card-header1 button{
-font-size: 16px;
-font-weight: 600;
-line-height: 20.11px;
-text-align: left;
-color: #414042 !important;
 
-}
+    .iot-mobile-card-header1 button {
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 20.11px;
+        text-align: left;
+        color: #414042 !important;
+
+    }
+
     .iot-mobile-span {
         color: #2CA068 !important;
         position: relative;
     }
+
     .iot-mobile-span::after {
         content: '';
         position: absolute;
@@ -500,10 +545,12 @@ color: #414042 !important;
         list-style: none !important;
         padding-left: 0 !important;
     }
+
     .custom-list li {
         background: url('./iotimages/tick.png') no-repeat left center;
         margin-bottom: 20px !important;
     }
+
     .iot-mobile-card-body p {
         font-size: 12px !important;
         font-weight: 400 !important;
@@ -512,9 +559,11 @@ color: #414042 !important;
         color: #676968 !important;
         margin-top: 20px !important;
     }
+
     .custom-list {
         margin-top: 20px !important;
     }
+
     .custom-list li span {
         font-size: 14px !important;
         font-weight: 400 !important;
@@ -522,6 +571,7 @@ color: #414042 !important;
         text-align: left !important;
         padding-left: 30px !important;
     }
+
     .iot-mobile-background {
         background-image: url(./iotimages/rectangle\ mobile.png);
         background-size: cover;
@@ -531,9 +581,11 @@ color: #414042 !important;
         border-bottom-right-radius: 50px !important;
         margin-top: 30px !important;
     }
+
     .iot-mobile-card {
         padding: 20px !important;
     }
+
     .iot-mobile-button {
         font-size: 16px;
         font-weight: 700;
@@ -543,8 +595,9 @@ color: #414042 !important;
         border-radius: 8px !important;
         color: white !important;
         box-shadow: none !important;
+        height: 36px;
     }
-    
+
 }
 
 
@@ -867,12 +920,18 @@ color: #414042 !important;
         width: 28px;
         height: 3px;
     }
+    .column span {
+        font-size: 32px;
+    }
 
 }
 
 @media (min-width:321px) and (max-width:375px) {
     .column-benefits {
         height: 260px !important;
+    }
+    .column span {
+        font-size: 32px;
     }
 }
 
@@ -884,6 +943,9 @@ color: #414042 !important;
         margin-bottom: 20px;
         border-radius: 10px;
         box-shadow: 4px 4px 8px 0px rgba(0, 0, 0, 0.1);
+    }
+    .column span {
+        font-size: 32px;
     }
 
     .column-details {
@@ -1153,7 +1215,7 @@ color: #414042 !important;
         font-weight: 700;
         line-height: 25.14px;
         text-align: center;
-        padding: 10px;
+        padding: 4px;
 
     }
 
@@ -1318,7 +1380,9 @@ color: #414042 !important;
     gap: 8px;
     opacity: 0px;
 }
-
+ .webapp_section_8_leftsidepara{
+    margin-bottom: 30px !important;
+}
 .leftsidesecondcol {
     width: auto;
     gap: 8px;
@@ -1395,13 +1459,13 @@ color: #414042 !important;
         text-align: left;
     }
 
-   
+
 
     .webapp_section_8_webdevbenefits::after {
         width: 0px;
     }
 
- 
+
     .webapp_section_8_rectangle_line {
         display: inline;
         width: 28px;
@@ -1660,9 +1724,9 @@ color: #676968;
     /* color: #007bff; */
     text-decoration: none !important;
     /* font-weight: bold; */
-font-size: 16px;
-font-weight: 600;
-line-height: 22px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 22px;
 
 }
 
@@ -1697,97 +1761,120 @@ line-height: 22px;
 .iot-card7 {
     background-color: #E4FFF2 !important;
 }
-.iot-a1{
+
+.iot-a1 {
     color: #2CA068 !important;
     position: relative;
 
 
 }
+
 .iot-a1::after {
-    content: '➔'; 
+    content: '➔';
     position: absolute;
     left: 85px !important;
     top: 50%;
     transform: translateY(-50%);
 }
+
 .iot-a1::before {
     content: '';
     position: absolute;
-    bottom: -2px; /* Adjust this value to position the underline */
+    bottom: -2px;
+    /* Adjust this value to position the underline */
     left: 0;
     width: 38%;
-    height: 2px; /* Thickness of the underline */
-    background-color: currentColor; /* Use the same color as the text */
+    height: 2px;
+    /* Thickness of the underline */
+    background-color: currentColor;
+    /* Use the same color as the text */
 }
-.iot-a2{
+
+.iot-a2 {
     color: #5573DB !important;
     position: relative;
 
 
 }
+
 .iot-a2::after {
-    content: '➔'; 
+    content: '➔';
     position: absolute;
     left: 85px !important;
     top: 50%;
     transform: translateY(-50%);
 }
+
 .iot-a2::before {
     content: '';
     position: absolute;
-    bottom: -2px; /* Adjust this value to position the underline */
+    bottom: -2px;
+    /* Adjust this value to position the underline */
     left: 0;
     width: 38%;
-    height: 2px; /* Thickness of the underline */
-    background-color: currentColor; /* Use the same color as the text */
+    height: 2px;
+    /* Thickness of the underline */
+    background-color: currentColor;
+    /* Use the same color as the text */
 }
 
-.iot-a3{
+.iot-a3 {
     color: #E9981E !important;
     position: relative;
 
 
 }
+
 .iot-a3::after {
-    content: '➔'; 
+    content: '➔';
     position: absolute;
     left: 85px !important;
     top: 50%;
     transform: translateY(-50%);
 }
+
 .iot-a3::before {
     content: '';
     position: absolute;
-    bottom: -2px; /* Adjust this value to position the underline */
+    bottom: -2px;
+    /* Adjust this value to position the underline */
     left: 0;
     width: 38%;
-    height: 2px; /* Thickness of the underline */
-    background-color: currentColor; /* Use the same color as the text */
+    height: 2px;
+    /* Thickness of the underline */
+    background-color: currentColor;
+    /* Use the same color as the text */
 }
-.iot-a4{
+
+.iot-a4 {
     color: #EF68C0 !important;
     position: relative;
 
 
 }
+
 .iot-a4::after {
-    content: '➔'; 
+    content: '➔';
     position: absolute;
     left: 85px !important;
     top: 50%;
     transform: translateY(-50%);
 }
+
 .iot-a4::before {
     content: '';
     position: absolute;
-    bottom: -2px; /* Adjust this value to position the underline */
+    bottom: -2px;
+    /* Adjust this value to position the underline */
     left: 0;
     width: 38%;
-    height: 2px; /* Thickness of the underline */
-    background-color: currentColor; /* Use the same color as the text */
+    height: 2px;
+    /* Thickness of the underline */
+    background-color: currentColor;
+    /* Use the same color as the text */
 }
 
-@media (max-width: 425px)  {
+@media (max-width: 425px) {
 
     .iot-header {
         font-size: 32px;
@@ -1826,106 +1913,129 @@ line-height: 22px;
     }
 
     .iot-card {
-        width: 382px !important;
+        width: auto !important;
         /* Adjust to fit smaller screens */
         height: 308px !important;
         margin-bottom: 20px;
+        margin-right: 0px !important;
     }
 
     .iot-card:not(:last-child) {
         margin-bottom: 20px;
     }
 
-    
-.iot-a1{
-    color: #2CA068 !important;
-    position: relative;
+
+    .iot-a1 {
+        color: #2CA068 !important;
+        position: relative;
 
 
-}
-.iot-a1::after {
-    content: '➔'; 
-    position: absolute;
-    left: 85px !important;
-    top: 50%;
-    transform: translateY(-50%);
-}
-.iot-a1::before {
-    content: '';
-    position: absolute;
-    bottom: -2px; /* Adjust this value to position the underline */
-    left: 0;
-    width: 30%;
-    height: 2px; /* Thickness of the underline */
-    background-color: currentColor; /* Use the same color as the text */
-}
-.iot-a2{
-    color: #5573DB !important;
-    position: relative;
+    }
+
+    .iot-a1::after {
+        content: '➔';
+        position: absolute;
+        left: 85px !important;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .iot-a1::before {
+        content: '';
+        position: absolute;
+        bottom: -2px;
+        /* Adjust this value to position the underline */
+        left: 0;
+        width: 30%;
+        height: 2px;
+        /* Thickness of the underline */
+        background-color: currentColor;
+        /* Use the same color as the text */
+    }
+
+    .iot-a2 {
+        color: #5573DB !important;
+        position: relative;
 
 
-}
-.iot-a2::after {
-    content: '➔'; 
-    position: absolute;
-    left: 85px !important;
-    top: 50%;
-    transform: translateY(-50%);
-}
-.iot-a2::before {
-    content: '';
-    position: absolute;
-    bottom: -2px; /* Adjust this value to position the underline */
-    left: 0;
-    width: 30%;
-    height: 2px; /* Thickness of the underline */
-    background-color: currentColor; /* Use the same color as the text */
-}
+    }
 
-.iot-a3{
-    color: #E9981E !important;
-    position: relative;
+    .iot-a2::after {
+        content: '➔';
+        position: absolute;
+        left: 85px !important;
+        top: 50%;
+        transform: translateY(-50%);
+    }
 
+    .iot-a2::before {
+        content: '';
+        position: absolute;
+        bottom: -2px;
+        /* Adjust this value to position the underline */
+        left: 0;
+        width: 30%;
+        height: 2px;
+        /* Thickness of the underline */
+        background-color: currentColor;
+        /* Use the same color as the text */
+    }
 
-}
-.iot-a3::after {
-    content: '➔'; 
-    position: absolute;
-    left: 85px !important;
-    top: 50%;
-    transform: translateY(-50%);
-}
-.iot-a3::before {
-    content: '';
-    position: absolute;
-    bottom: -2px; /* Adjust this value to position the underline */
-    left: 0;
-    width: 30%;
-    height: 2px; /* Thickness of the underline */
-    background-color: currentColor; /* Use the same color as the text */
-}
-.iot-a4{
-    color: #EF68C0 !important;
-    position: relative;
+    .iot-a3 {
+        color: #E9981E !important;
+        position: relative;
 
 
-}
-.iot-a4::after {
-    content: '➔'; 
-    position: absolute;
-    left: 85px !important;
-    top: 50%;
-    transform: translateY(-50%);
-}
-.iot-a4::before {
-    content: '';
-    position: absolute;
-    bottom: -2px; /* Adjust this value to position the underline */
-    left: 0;
-    width: 30%;
-    height: 2px; /* Thickness of the underline */
-    background-color: currentColor; /* Use the same color as the text */
-}
+    }
+
+    .iot-a3::after {
+        content: '➔';
+        position: absolute;
+        left: 85px !important;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .iot-a3::before {
+        content: '';
+        position: absolute;
+        bottom: -2px;
+        /* Adjust this value to position the underline */
+        left: 0;
+        width: 30%;
+        height: 2px;
+        /* Thickness of the underline */
+        background-color: currentColor;
+        /* Use the same color as the text */
+    }
+
+    .iot-a4 {
+        color: #EF68C0 !important;
+        position: relative;
+
+
+    }
+
+    .iot-a4::after {
+        content: '➔';
+        position: absolute;
+        left: 85px !important;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .iot-a4::before {
+        content: '';
+        position: absolute;
+        bottom: -2px;
+        /* Adjust this value to position the underline */
+        left: 0;
+        width: 30%;
+        height: 2px;
+        /* Thickness of the underline */
+        background-color: currentColor;
+        /* Use the same color as the text */
+    }
 }
 
 @media (min-width: 375px) and (max-width:424px) {
@@ -1963,106 +2073,130 @@ line-height: 22px;
     }
 
     .iot-card {
-        width: 90% !important;
+        width: auto !important;
         /* Adjust to fit smaller screens */
         height: auto !important;
         margin-bottom: 20px;
         /* padding: 40px !important; */
+        margin-right: 0px !important;
+
     }
 
     .iot-card:not(:last-child) {
         margin-bottom: 20px;
     }
-       
-.iot-a1{
-    color: #2CA068 !important;
-    position: relative;
+
+    .iot-a1 {
+        color: #2CA068 !important;
+        position: relative;
 
 
-}
-.iot-a1::after {
-    content: '➔'; 
-    position: absolute;
-    left: 85px !important;
-    top: 50%;
-    transform: translateY(-50%);
-}
-.iot-a1::before {
-    content: '';
-    position: absolute;
-    bottom: -2px; /* Adjust this value to position the underline */
-    left: 0;
-    width: 43%;
-    height: 2px; /* Thickness of the underline */
-    background-color: currentColor; /* Use the same color as the text */
-}
-.iot-a2{
-    color: #5573DB !important;
-    position: relative;
+    }
+
+    .iot-a1::after {
+        content: '➔';
+        position: absolute;
+        left: 85px !important;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .iot-a1::before {
+        content: '';
+        position: absolute;
+        bottom: -2px;
+        /* Adjust this value to position the underline */
+        left: 0;
+        width: 43%;
+        height: 2px;
+        /* Thickness of the underline */
+        background-color: currentColor;
+        /* Use the same color as the text */
+    }
+
+    .iot-a2 {
+        color: #5573DB !important;
+        position: relative;
 
 
-}
-.iot-a2::after {
-    content: '➔'; 
-    position: absolute;
-    left: 85px !important;
-    top: 50%;
-    transform: translateY(-50%);
-}
-.iot-a2::before {
-    content: '';
-    position: absolute;
-    bottom: -2px; /* Adjust this value to position the underline */
-    left: 0;
-    width: 43%;
-    height: 2px; /* Thickness of the underline */
-    background-color: currentColor; /* Use the same color as the text */
-}
+    }
 
-.iot-a3{
-    color: #E9981E !important;
-    position: relative;
+    .iot-a2::after {
+        content: '➔';
+        position: absolute;
+        left: 85px !important;
+        top: 50%;
+        transform: translateY(-50%);
+    }
 
+    .iot-a2::before {
+        content: '';
+        position: absolute;
+        bottom: -2px;
+        /* Adjust this value to position the underline */
+        left: 0;
+        width: 43%;
+        height: 2px;
+        /* Thickness of the underline */
+        background-color: currentColor;
+        /* Use the same color as the text */
+    }
 
-}
-.iot-a3::after {
-    content: '➔'; 
-    position: absolute;
-    left: 85px !important;
-    top: 50%;
-    transform: translateY(-50%);
-}
-.iot-a3::before {
-    content: '';
-    position: absolute;
-    bottom: -2px; /* Adjust this value to position the underline */
-    left: 0;
-    width: 43%;
-    height: 2px; /* Thickness of the underline */
-    background-color: currentColor; /* Use the same color as the text */
-}
-.iot-a4{
-    color: #EF68C0 !important;
-    position: relative;
+    .iot-a3 {
+        color: #E9981E !important;
+        position: relative;
 
 
-}
-.iot-a4::after {
-    content: '➔'; 
-    position: absolute;
-    left: 85px !important;
-    top: 50%;
-    transform: translateY(-50%);
-}
-.iot-a4::before {
-    content: '';
-    position: absolute;
-    bottom: -2px; /* Adjust this value to position the underline */
-    left: 0;
-    width: 43%;
-    height: 2px; /* Thickness of the underline */
-    background-color: currentColor; /* Use the same color as the text */
-}
+    }
+
+    .iot-a3::after {
+        content: '➔';
+        position: absolute;
+        left: 85px !important;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .iot-a3::before {
+        content: '';
+        position: absolute;
+        bottom: -2px;
+        /* Adjust this value to position the underline */
+        left: 0;
+        width: 43%;
+        height: 2px;
+        /* Thickness of the underline */
+        background-color: currentColor;
+        /* Use the same color as the text */
+    }
+
+    .iot-a4 {
+        color: #EF68C0 !important;
+        position: relative;
+
+
+    }
+
+    .iot-a4::after {
+        content: '➔';
+        position: absolute;
+        left: 85px !important;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .iot-a4::before {
+        content: '';
+        position: absolute;
+        bottom: -2px;
+        /* Adjust this value to position the underline */
+        left: 0;
+        width: 43%;
+        height: 2px;
+        /* Thickness of the underline */
+        background-color: currentColor;
+        /* Use the same color as the text */
+    }
 }
 
 @media (min-width: 320px) and (max-width:374px) {
@@ -2102,106 +2236,130 @@ line-height: 22px;
     }
 
     .iot-card {
-        width: 90% !important;
+        width:auto !important;
         /* Adjust to fit smaller screens */
         height: auto !important;
         margin-bottom: 20px;
-      
+        margin-right: 0px !important;
+
+
     }
 
     .iot-card:not(:last-child) {
         margin-bottom: 20px;
     }
-       
-.iot-a1{
-    color: #2CA068 !important;
-    position: relative;
+
+    .iot-a1 {
+        color: #2CA068 !important;
+        position: relative;
 
 
-}
-.iot-a1::after {
-    content: '➔'; 
-    position: absolute;
-    left: 85px !important;
-    top: 50%;
-    transform: translateY(-50%);
-}
-.iot-a1::before {
-    content: '';
-    position: absolute;
-    bottom: -2px; /* Adjust this value to position the underline */
-    left: 0;
-    width: 55%;
-    height: 2px; /* Thickness of the underline */
-    background-color: currentColor; /* Use the same color as the text */
-}
-.iot-a2{
-    color: #5573DB !important;
-    position: relative;
+    }
+
+    .iot-a1::after {
+        content: '➔';
+        position: absolute;
+        left: 85px !important;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .iot-a1::before {
+        content: '';
+        position: absolute;
+        bottom: -2px;
+        /* Adjust this value to position the underline */
+        left: 0;
+        width: 55%;
+        height: 2px;
+        /* Thickness of the underline */
+        background-color: currentColor;
+        /* Use the same color as the text */
+    }
+
+    .iot-a2 {
+        color: #5573DB !important;
+        position: relative;
 
 
-}
-.iot-a2::after {
-    content: '➔'; 
-    position: absolute;
-    left: 85px !important;
-    top: 50%;
-    transform: translateY(-50%);
-}
-.iot-a2::before {
-    content: '';
-    position: absolute;
-    bottom: -2px; /* Adjust this value to position the underline */
-    left: 0;
-    width: 55%;
-    height: 2px; /* Thickness of the underline */
-    background-color: currentColor; /* Use the same color as the text */
-}
+    }
 
-.iot-a3{
-    color: #E9981E !important;
-    position: relative;
+    .iot-a2::after {
+        content: '➔';
+        position: absolute;
+        left: 85px !important;
+        top: 50%;
+        transform: translateY(-50%);
+    }
 
+    .iot-a2::before {
+        content: '';
+        position: absolute;
+        bottom: -2px;
+        /* Adjust this value to position the underline */
+        left: 0;
+        width: 55%;
+        height: 2px;
+        /* Thickness of the underline */
+        background-color: currentColor;
+        /* Use the same color as the text */
+    }
 
-}
-.iot-a3::after {
-    content: '➔'; 
-    position: absolute;
-    left: 85px !important;
-    top: 50%;
-    transform: translateY(-50%);
-}
-.iot-a3::before {
-    content: '';
-    position: absolute;
-    bottom: -2px; /* Adjust this value to position the underline */
-    left: 0;
-    width: 55%;
-    height: 2px; /* Thickness of the underline */
-    background-color: currentColor; /* Use the same color as the text */
-}
-.iot-a4{
-    color: #EF68C0 !important;
-    position: relative;
+    .iot-a3 {
+        color: #E9981E !important;
+        position: relative;
 
 
-}
-.iot-a4::after {
-    content: '➔'; 
-    position: absolute;
-    left: 85px !important;
-    top: 50%;
-    transform: translateY(-50%);
-}
-.iot-a4::before {
-    content: '';
-    position: absolute;
-    bottom: -2px; /* Adjust this value to position the underline */
-    left: 0;
-    width: 55%;
-    height: 2px; /* Thickness of the underline */
-    background-color: currentColor; /* Use the same color as the text */
-}
+    }
+
+    .iot-a3::after {
+        content: '➔';
+        position: absolute;
+        left: 85px !important;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .iot-a3::before {
+        content: '';
+        position: absolute;
+        bottom: -2px;
+        /* Adjust this value to position the underline */
+        left: 0;
+        width: 55%;
+        height: 2px;
+        /* Thickness of the underline */
+        background-color: currentColor;
+        /* Use the same color as the text */
+    }
+
+    .iot-a4 {
+        color: #EF68C0 !important;
+        position: relative;
+
+
+    }
+
+    .iot-a4::after {
+        content: '➔';
+        position: absolute;
+        left: 85px !important;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .iot-a4::before {
+        content: '';
+        position: absolute;
+        bottom: -2px;
+        /* Adjust this value to position the underline */
+        left: 0;
+        width: 55%;
+        height: 2px;
+        /* Thickness of the underline */
+        background-color: currentColor;
+        /* Use the same color as the text */
+    }
 }
 
 
@@ -2387,7 +2545,7 @@ line-height: 22px;
         font-size: 14px;
         font-weight: 600;
         line-height: 17.6px;
-        margin-left: -40px !important;
+        margin-left: -30px !important;
         margin-top: 15px !important;
     }
 
@@ -2395,7 +2553,7 @@ line-height: 22px;
         font-size: 10px;
         font-weight: 400;
         line-height: 12.57px;
-        margin-left: -40px !important;
+        margin-left: -30px !important;
         margin-top: 0px !important;
     }
 
@@ -2515,7 +2673,7 @@ line-height: 22px;
 
 .case-maincard {
     /* width: 300px; */
-    height: 480px !important;
+    height: 440px !important;
     border-radius: 20px !important;
     box-shadow: 0px 0px 8px 0px #00000040 !important;
     border: none !important;
@@ -2588,15 +2746,16 @@ line-height: 22px;
         /* justify-content: space-between !important; */
         /* flex-direction: column !important; */
         align-items: center !important;
-        justify-content: center !important;
-        gap: 50px !important;
+        justify-content: end !important;
+        gap: 20px !important;
         margin-top: 20px !important;
+        margin-right: 30px !important;
     }
 
     .case-studies-mobile-arrow {
         cursor: pointer;
         font-size: 24px;
-        /* padding: 10px; */
+        width: 60px !important;
     }
 
     .case-studies-mobile-main-container h1 {
@@ -2613,7 +2772,7 @@ line-height: 22px;
         line-height: 22px;
         text-align: left;
         color: #676968 !important;
-        margin-top: 10px !important;
+        margin-top: 20px !important;
 
     }
 
@@ -2636,7 +2795,7 @@ line-height: 22px;
 
     .case-studies-mobile-card1 {
         /* width: 300px; */
-        /* height: 461px !important; */
+        /* height: 491px !important; */
         border-radius: 20px !important;
         box-shadow: 0px 0px 8px 0px #00000040 !important;
         border: none !important;
@@ -2662,6 +2821,8 @@ line-height: 22px;
 
     .case-studies-mobile-card1 a {
         color: #2CA068 !important;
+
+  
     }
 }
 
@@ -3316,6 +3477,11 @@ label {
 
 .form-text {
     font-size: 24px;
+    font-weight: 600 !important;
+    line-height: 30.17px !important;
+    text-align: left !;
+    color: #000000 !important;
+    
 }
 
 .form-line {
@@ -3985,6 +4151,8 @@ textarea {
 
 .form-touch {
     color: #2CA068;
+    /* font-size: 24px !important; */
+
 }
 
 .form-head::after {
@@ -4039,7 +4207,7 @@ label {
 }
 
 .form-text {
-    font-size: 24px;
+    font-size: 24px !important;
 }
 
 .form-line {
@@ -4323,49 +4491,49 @@ textarea {
     background-color: #ffffff;
     padding: 10px;
     margin-top: 50px;
-  }
-  
-  .footer h3 {
+}
+
+.footer h3 {
     color: #000000;
     margin-bottom: 15px;
     margin-top: 0;
     cursor: pointer;
-  }
-  
-  .footer-menu {
+}
+
+.footer-menu {
     padding-left: 0;
     list-style-type: none;
     display: none;
-  }
-  
-  .footer-menu.active {
+}
+
+.footer-menu.active {
     display: block;
-  }
-  
-  .footer-menu li {
+}
+
+.footer-menu li {
     color: #676968;
     font-size: 16px;
     margin-bottom: 10px;
     cursor: pointer;
-  }
-  
-  .footer-menu li:hover,
-  .footer h3:hover {
+}
+
+.footer-menu li:hover,
+.footer h3:hover {
     color: #000000;
     font-weight: 500;
-  }
-  
-  .footer-border {
+}
+
+.footer-border {
     height: 1px;
     background-color: #eeeeee;
     margin: 20px 0;
-  }
-  
-  .footer-text3 {
+}
+
+.footer-text3 {
     display: flex;
-  }
-  
-  .footer .icon {
+}
+
+.footer .icon {
     height: 32px;
     width: 32px;
     background-color: #f3f3f3;
@@ -4375,134 +4543,141 @@ textarea {
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  
-  .footer .icon:hover {
+}
+
+.footer .icon:hover {
     color: #000000;
-  }
-  
-  .footer-text1,
-  .footer-text2 {
+}
+
+.footer-text1,
+.footer-text2 {
     font-size: 14px;
-font-size: 14px;
-font-weight: 400;
-line-height: 17.6px;
-text-align: left;
-color: #706E72;
-margin-top: 5px !important;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17.6px;
+    text-align: left;
+    color: #706E72;
+    margin-top: 5px !important;
 
-
-  }
-  .footer-text1{
-    margin-top: 6px !important;
-  }
-.footer-text3{
-margin-top: -5px !important;
 
 }
-  .footer-menu {
+
+.footer-text1 {
+    margin-top: 6px !important;
+}
+
+.footer-text3 {
+    margin-top: -5px !important;
+
+}
+
+.footer-menu {
     display: block;
-  }
-  
-  #footer-head i {
+}
+
+#footer-head i {
     display: none;
-  }
-  
-  .footer-line {
+}
+
+.footer-line {
     display: none;
-  }
-  
-  .footer-services li {
+}
+
+.footer-services li {
     width: auto;
     white-space: nowrap;
     text-overflow: ellipsis;
-  }
-  
-  .copysymbol {
+}
+
+.copysymbol {
     font-size: 20px;
     padding-right: 5px;
- 
-  }
-  
-  .copysymbol_text {
+
+}
+
+.copysymbol_text {
     margin-top: -100px;
-  }
-  
-  .footer-bottom-content {
+}
+
+.footer-bottom-content {
     text-align: center;
-  }
-  
-  @media only screen and (max-width: 768px) {
+}
+
+@media only screen and (max-width: 768px) {
     .copysymbol {
-      margin-top: 20px;
-      font-size: 20px;
-      padding-right: 2px;
+        margin-top: 20px;
+        font-size: 20px;
+        padding-right: 2px;
     }
-  
+
     .footer h3 {
-      font-size: 16px;
-      margin-bottom: 0;
-      color: #676968;
+        font-size: 16px;
+        margin-bottom: 0;
+        color: #676968;
     }
-  
+
     .footer-menu li {
-      font-size: 14px;
+        font-size: 14px;
     }
+
     .footer-menu li:hover,
     .footer h3:hover {
-      color: #000000 !important;
-      font-weight: 500 !important;
+        color: #000000 !important;
+        font-weight: 500 !important;
     }
+
     .footer-border {
-      display: none;
+        display: none;
     }
-  
+
     .footer .container .row {
-      flex-direction: column;
+        flex-direction: column;
     }
-  
+
     .footer-menu {
-      display: none;
+        display: none;
     }
-  
+
     .footer-menu.active {
-      display: block;
+        display: block;
     }
-  
+
     .footer-line {
-      display: block;
+        display: block;
     }
-  
+
     #footer-head i {
-      display: inline;
+        display: inline;
     }
-  
+
     .footer-bottom-content {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
-    .footer-text1{
-font-size: 13px;
-font-weight: 400;
-line-height: 20.11px;
-/* text-align: left; */
-padding-bottom: 10px !important;
-display: flex;
-flex-direction: column;
-align-items: center;
+
+    .footer-text1 {
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 20.11px;
+        /* text-align: left; */
+        padding-bottom: 10px !important;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
-  
+
     .footer-text2 {
-      margin-top: 15px;
-font-size: 12px;
-font-weight: 400;
-line-height: 15.08px;
-text-align: center;
+        margin-top: 15px;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 15.08px;
+        text-align: center;
 
 
     }
-    .footer-text3{
-      padding-bottom: 10px !important;
+
+    .footer-text3 {
+        padding-bottom: 10px !important;
     }
-  }
+}
