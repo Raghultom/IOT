@@ -1659,11 +1659,16 @@ color: #676968;
 } */
 .main-container {
     display: flex;
-    overflow-x: auto !important; /* Use 'auto' instead of 'scroll' */
-    scroll-snap-type: x mandatory !important;
-    -webkit-overflow-scrolling: touch !important;
+    overflow-x: auto; /* Use 'auto' instead of 'scroll' */
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
     padding: 20px;
     box-sizing: border-box;
+    cursor: grab;
+}
+
+.main-container.active {
+    cursor: grabbing;
 }
 
 
