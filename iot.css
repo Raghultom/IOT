@@ -171,6 +171,7 @@ body {
         font-weight: 600;
         line-height: 45.25px;
         text-align: center;
+        margin-top: 0px !important;
 
 
 
@@ -474,7 +475,7 @@ height: 42px !important;
 
 
 
-@media screen and (max-width: 320px) {
+@media screen and (min-width: 320px) {
     .iot-mobile-button {
         font-size: 16px !important;
         font-weight: 200 !important;
@@ -486,6 +487,19 @@ height: 42px !important;
         box-shadow: none !important;
         height: 32px !important;
     }
+    
+.iot-mobile-btn p{
+
+    font-size: 12px !important;
+  
+    
+}
+.iot-mobile-card {
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+
+}
+
 
 }
 
@@ -1507,7 +1521,7 @@ height: 42px !important;
         display: block;
         height: auto;
         width: 100%;
-        padding: 30px !important;
+        /* padding: 30px !important; */
     }
 
     .webapp_section_8_right {
