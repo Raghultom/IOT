@@ -438,13 +438,13 @@ height: 36px !important; */
 
 }
 
-.iot-mobile-btn.show {
+/* .iot-mobile-btn.show {
     background: linear-gradient(90.97deg, #2CA068 6.46%, #23899C 100%);
     color: white !important;
     border: none !important;
     text-decoration: none !important;
     box-shadow: none !important;
-    font-size: 18px !important;
+    font-size: 16px !important;
     font-weight: 600;
     line-height: 25.14px;
     text-align: left;
@@ -452,7 +452,45 @@ height: 36px !important; */
     border-bottom-right-radius: 20px !important;
     height: 44px !important;
     width: 100% !important;
+
+} */
+
+.iot-mobile-btn.show {
+    background: linear-gradient(90.97deg, #2CA068 6.46%, #23899C 100%);
+    color: white !important;
+    border: none !important;
+    text-decoration: none !important;
+    box-shadow: none !important;
+    font-size: 16px !important;
+    font-weight: 600;
+    line-height: 25.14px;
+    text-align: center;
+    border-top-left-radius: 20px !important;
+    border-bottom-right-radius: 20px !important;
+    height: 44px !important;
+    width: 100% !important;
+    
+    padding-left: 20px !important; /* Adjust as needed for left gap */
+    padding-right: 20px !important; /* Adjust as needed for right gap */
+    box-sizing: border-box; /* Ensure padding is included in the width */
+    display: flex !important;
+    /* justify-content: center !important; */
+    /* align-items: center !important; */
 }
+/* .iot-mobile-btn p{
+    margin-top: 10px;
+}
+.iot-mobile-btn.show i{
+    margin-left: -40px;
+}
+
+.iot-mobile-btn.show p{
+    margin-top: 14px;
+    margin-left: 8px;
+} */
+
+
+
 
 .iot-mobile-card-header1 button {
     text-decoration: none;
@@ -486,8 +524,9 @@ height: 36px !important; */
 }
 
 @media screen and (max-width: 767px) {
-    .iot-mobile-icon i {
-        margin-left: auto !important;
+    .iot-mobile-btn-text{
+        width: 400px;
+        margin: 0px 10px !important;
     }
 
     .iot-mobile-icon {
@@ -588,7 +627,10 @@ height: 36px !important; */
     }
 
     .iot-mobile-card {
-        padding: 20px !important;
+        /* padding: 20px !important; */
+        padding-top: 20px !important;
+        padding-bottom: 20px !important;
+
     }
 
     .iot-mobile-button {
