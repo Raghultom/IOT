@@ -426,34 +426,17 @@ height: 42px !important;
     border: none !important;
     box-shadow: none !important;
     color: #000000 !important;
-    display: flex;
-    justify-content: space-between;
+    display: flex !important;
+    justify-content: space-between !important;
     align-items: center;
     width: 100% !important;
-    text-align: left;
     font-size: 16px !important;
     font-weight: 600;
     line-height: 25.14px;
     text-align: left;
-
+    
 }
 
-/* .iot-mobile-btn.show {
-    background: linear-gradient(90.97deg, #2CA068 6.46%, #23899C 100%);
-    color: white !important;
-    border: none !important;
-    text-decoration: none !important;
-    box-shadow: none !important;
-    font-size: 16px !important;
-    font-weight: 600;
-    line-height: 25.14px;
-    text-align: left;
-    border-top-left-radius: 20px !important;
-    border-bottom-right-radius: 20px !important;
-    height: 44px !important;
-    width: 100% !important;
-
-} */
 
 .iot-mobile-btn.show {
     background: linear-gradient(90.97deg, #2CA068 6.46%, #23899C 100%);
@@ -464,33 +447,13 @@ height: 42px !important;
     font-size: 16px !important;
     font-weight: 600;
     line-height: 25.14px;
-    text-align: center;
+    text-align: left;
     border-top-left-radius: 20px !important;
     border-bottom-right-radius: 20px !important;
     height: 44px !important;
     width: 100% !important;
-    
-    padding-left: 20px !important; /* Adjust as needed for left gap */
-    padding-right: 20px !important; /* Adjust as needed for right gap */
-    box-sizing: border-box; /* Ensure padding is included in the width */
-    display: flex !important;
-    /* justify-content: center !important; */
-    /* align-items: center !important; */
+
 }
-/* .iot-mobile-btn p{
-    margin-top: 10px;
-}
-.iot-mobile-btn.show i{
-    margin-left: -40px;
-}
-
-.iot-mobile-btn.show p{
-    margin-top: 14px;
-    margin-left: 8px;
-} */
-
-
-
 
 .iot-mobile-card-header1 button {
     text-decoration: none;
@@ -508,6 +471,8 @@ height: 42px !important;
     display: none !important;
 }
 
+
+
 @media screen and (max-width: 320px) {
     .iot-mobile-button {
         font-size: 16px !important;
@@ -524,15 +489,20 @@ height: 42px !important;
 }
 
 @media screen and (max-width: 767px) {
-    .iot-mobile-btn-text{
-        width: 400px;
+    .iot-mobile-icon {
+        float: right; /* This will move the icon to the right */
+        /* You can add additional styling here if needed */
+    }
+    
+    .iot-button .iot-mobile-btn p{
         margin: 0px 10px !important;
     }
-
     .iot-mobile-icon {
         font-size: 11px !important;
     }
-
+    .iot-mobile-icon  i{
+        padding-right: 10px !important;
+    }
     .iot-mobile-card-header1 h3 .btn {
         display: flex;
         justify-content: space-between;
@@ -623,7 +593,8 @@ height: 42px !important;
         background-position: center;
         border-top-left-radius: 50px !important;
         border-bottom-right-radius: 50px !important;
-        margin-top: 30px !important;
+        /* margin-top: 30px !important; */
+        padding: 15px 15px !important;
     }
 
     .iot-mobile-card {
@@ -2844,7 +2815,9 @@ color: #676968;
         display: flex;
         transition: transform 0.5s ease-in-out;
     }
-
+.card-img-top{
+    padding: 15px !important;
+}
     .case-studies-mobile-card {
         min-width: calc(100% - 20px);
         /* Adjust the width to account for the margin */
@@ -2904,7 +2877,7 @@ color: #676968;
         border-radius: 20px !important;
         box-shadow: 0px 0px 8px 0px #00000040 !important;
         margin-top: 10px !important;
-        padding: 20px !important;
+        /* padding: 20px !important; */
     }
 
     .case-studies-mobile-card1 h5 {
